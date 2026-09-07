@@ -5,10 +5,13 @@
 
 body{
      font-family: 'Montserrat';
+    background-color: #003F2A;
+
 }
 
 .header{
     padding-block: 30px;
+    background-color: white;
 }
 
 .header_container{
@@ -42,10 +45,31 @@ ul{
     color:black;
 }
 
-p{
+.header_logo{
     font-size: larger;
 }
 
 a{
     text-decoration: none;
+}
+
+.hero_tittle{
+    color: white;
+    margin: 20px 500px;
+    font-size: xx-large;
+}
+
+.hero_text-p1{
+    color: white;
+    margin: 20px 900px 10px 100px;
+    font-size: large;
+    line-height: 1.6;
+    max-width: 800px;
+}
+.hero_text-p2{
+    color: white;
+    margin: 10px 100px 20px 900px;
+    font-size: large;
+    line-height: 1.6;
+    max-width: 800px;
 }
