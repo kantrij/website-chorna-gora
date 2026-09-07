@@ -58,6 +58,7 @@ a{
     text-align: center;
     color: #ffffff;
     margin-bottom: 30px;
+    padding-top: 30px;
     font-size: 32px;
 }
 
@@ -97,4 +98,22 @@ a{
     margin-bottom: 16px;
     line-height: 1.6;
     text-align: justify;
+}
+
+.map-img{
+    width: 550px;   
+    height: auto;
+    display: flex;
+}
+
+.prof-img{
+    width: 600px;
+    height: auto;
+    display: flex;
+}
+
+.marking-img{
+    width: 550px;   
+    height: auto;
+    display: flex;
 }
