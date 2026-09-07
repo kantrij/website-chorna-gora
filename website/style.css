@@ -78,6 +78,21 @@ a{
     color: rgba(255, 255, 255, 0.9);
 }
 
+.rec-list-tittle{
+    font-weight: 600;
+}
+.rec-list{
+    list-style-type: disc; 
+    padding-left: 20px;     
+    margin: 0;
+}
+
+.rec-list li{
+    margin-bottom: 10px;
+    line-height: 1.5;
+    text-align: left;
+}      
+
 .text-column p {
     margin-bottom: 16px;
     line-height: 1.6;
