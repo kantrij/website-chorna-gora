@@ -53,23 +53,33 @@ a{
     text-decoration: none;
 }
 
-.hero_tittle{
-    color: white;
-    margin: 20px 500px;
-    font-size: xx-large;
+
+.main-title {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 32px;
 }
 
-.hero_text-p1{
-    color: white;
-    margin: 20px 900px 10px 100px;
-    font-size: large;
-    line-height: 1.6;
-    max-width: 800px;
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
-.hero_text-p2{
-    color: white;
-    margin: 10px 100px 20px 900px;
-    font-size: large;
+
+.text-column {
+    flex: 1; 
+    min-width: 0; 
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.text-column p {
+    margin-bottom: 16px;
     line-height: 1.6;
-    max-width: 800px;
+    text-align: justify;
 }
