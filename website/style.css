@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body{
+     font-family: 'Montserrat';
+}
+
 .header{
     padding-block: 30px;
 }
@@ -29,10 +33,17 @@ ul{
 
 .header_list-link{
     font-family: 'Montserrat';
+    font-weight: 400;
+    color:grey;
+    transition: color 0.2s;
+}
+
+.header_list-link:hover{
+    color:black;
 }
 
 p{
-    font-family: 'Montserrat';
+    font-size: larger;
 }
 
 a{
