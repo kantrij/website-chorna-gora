@@ -83,6 +83,7 @@ a{
 .rec-list-tittle{
     font-weight: 600;
 }
+
 .rec-list{
     list-style-type: disc; 
     padding-left: 20px;     
@@ -158,4 +159,121 @@ a{
     margin-bottom: 16px;
     line-height: 1.6;
     text-align: justify;
+}
+
+/* фотогалерея */
+
+.gallery-section {
+    margin-top: 60px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+}
+
+
+/* Вікно галереї */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-image {
+    max-width: 85vw;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+
+    border: none;
+    background: none;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 40px;
+}
+
+.lightbox-close {
+    top: 20px;
+    right: 30px;
+}
+
+.lightbox-prev {
+    left: 30px;
+}
+
+.lightbox-next {
+    right: 30px;
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 20px;
+
+    color: white;
+    font-size: 16px;
+}
+
+
+/* Телефон */
+
+@media (max-width: 700px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .gallery img {
+        height: 160px;
+    }
+
+    .lightbox-image {
+        max-width: 92vw;
+        max-height: 80vh;
+    }
+
+    .lightbox-prev {
+        left: 10px;
+    }
+
+    .lightbox-next {
+        right: 10px;
+    }
+
+    .lightbox-close {
+        top: 10px;
+        right: 15px;
+    }
 }
