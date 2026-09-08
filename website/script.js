@@ -32,6 +32,12 @@ closeButton.addEventListener("click", () => {
     lightbox.classList.remove("active");
 });
 
+lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+        lightbox.classList.remove("active");
+    }
+});
+
 nextButton.addEventListener("click", () => {
     currentIndex++;
 
