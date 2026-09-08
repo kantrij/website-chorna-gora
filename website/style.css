@@ -282,7 +282,15 @@ a{
 
 @media (max-width: 700px) {
 
-    /* Header */
+    /* Загальна ширина */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
 
     .header {
         padding: 20px 15px;
@@ -290,11 +298,12 @@ a{
 
     .header_container {
         width: 100%;
+        max-width: none;
     }
 
     .header_nav {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
     }
 
     .header_logo {
@@ -304,92 +313,95 @@ a{
 
     .header_list {
         gap: 25px;
+        justify-content: center;
         padding: 0;
     }
 
-
-    /* Заголовки */
-
-    .main-title {
-        font-size: 25px;
-        line-height: 1.25;
-        padding: 25px 15px 0;
-        margin-bottom: 25px;
-    }
-
+    .main-title,
     .section-tittle {
-        font-size: 24px;
+        font-size: 25px;
         line-height: 1.3;
         padding: 25px 15px 0;
+        margin-bottom: 20px;
     }
 
-
-    /* Основний текст */
-
-    .content-container {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        padding: 0 15px;
-    }
-
+    .content-container,
     .content-section {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
+
         width: 100%;
-        padding: 0 15px;
+        max-width: 100%;
+
+        gap: 25px;
+
+        padding-left: 15px;
+        padding-right: 15px;
+
+        margin: 0;
     }
 
     .text-column,
     .text-section,
     .text-section1 {
         width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        flex: none;
+
+        line-height: 1.6;
+        text-align: left;
     }
 
     .text-column p,
     .text-section p,
     .text-section1 p {
         text-align: left;
-        line-height: 1.6;
     }
-
-
-    /* Зображення */
 
     .map-img,
-    .marking-img,
-    .prof-img {
-        width: 100%;
-        height: auto;
+    .prof-img,
+    .marking-img {
         display: block;
+
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+
+        margin: 0 auto;
     }
 
-
-    /* Галерея */
-
     .gallery {
+        width: 100%;
+        max-width: 100%;
+
         grid-template-columns: repeat(2, 1fr);
+
         gap: 10px;
+
         padding: 0 15px;
     }
 
     .gallery img {
         width: 100%;
         height: 150px;
+
         object-fit: cover;
     }
 
-
-    /* Lightbox */
-
     .lightbox-image {
+        width: auto;
         max-width: 90vw;
         max-height: 75vh;
+
+        object-fit: contain;
     }
 
     .lightbox-close {
         top: 15px;
         right: 15px;
+
         font-size: 35px;
     }
 

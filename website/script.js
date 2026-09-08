@@ -73,3 +73,35 @@ document.addEventListener("keydown", (event) => {
         prevButton.click();
     }
 });
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+lightbox.addEventListener("touchstart", (event) => {
+    touchStartX = event.changedTouches[0].screenX;
+});
+
+lightbox.addEventListener("touchend", (event) => {
+    touchEndX = event.changedTouches[0].screenX;
+
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const swipeDistance = touchEndX - touchStartX;
+
+    
+    if (Math.abs(swipeDistance) < 50) {
+        return;
+    }
+
+   
+    if (swipeDistance < 0) {
+        nextPhoto();
+    }
+
+   
+    if (swipeDistance > 0) {
+        previousPhoto();
+    }
+}
