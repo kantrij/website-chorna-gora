@@ -174,7 +174,7 @@ a{
     text-align: justify;
 }
 
-/* фотогалерея */
+/* фотогалерея замок */
 
 .gallery-section {
     margin-top: 60px;
@@ -197,9 +197,6 @@ a{
 .gallery img:hover {
     transform: scale(1.02);
 }
-
-
-/* Вікно галереї */
 
 .lightbox {
     position: fixed;
@@ -257,6 +254,42 @@ a{
     color: white;
     font-size: 16px;
 }
+
+/* заказник */
+
+.content-section2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.text-section-3{
+    flex: 1; 
+    min-width: 0; 
+    color: white;
+    font-weight: 500;
+    margin-bottom: 16px;
+    line-height: 1.78;
+    text-align: justify;
+}
+
+.text-section-4{
+    flex: 1; 
+    min-width: 0; 
+    color: white;
+    font-weight: 500;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* фотогалерея заказник */
+
 
 
 /* Телефон */
