@@ -1,141 +1,85 @@
-const photos = document.querySelectorAll(".gallery img");
+// ==============================
+// Перша галерея
+// ==============================
 
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightboxImage");
+const photosFirst = document.querySelectorAll(".gallery-first img");
+const lightboxFirst = document.getElementById("lightboxFirst");
+const lightboxImageFirst = document.getElementById("lightboxImageFirst");
+const closeButtonFirst = document.getElementById("lightboxCloseFirst");
+const prevButtonFirst = document.getElementById("lightboxPrevFirst");
+const nextButtonFirst = document.getElementById("lightboxNextFirst");
+const counterFirst = document.getElementById("lightboxCounterFirst");
 
-const closeButton = document.querySelector(".lightbox-close");
-const prevButton = document.querySelector(".lightbox-prev");
-const nextButton = document.querySelector(".lightbox-next");
+let currentIndexFirst = 0;
 
-const counter = document.getElementById("lightbox-counter");
+function openGalleryFirst(index) {
+    currentIndexFirst = index;
 
-let currentIndex = 0;
+    lightboxImageFirst.src = photosFirst[currentIndexFirst].src;
+    lightboxImageFirst.alt = photosFirst[currentIndexFirst].alt;
 
-function openGallery(index) {
-    currentIndex = index;
+    counterFirst.textContent =
+        `${currentIndexFirst + 1} / ${photosFirst.length}`;
 
-    lightboxImage.src = photos[currentIndex].src;
-    lightboxImage.alt = photos[currentIndex].alt;
-
-    counter.textContent = `${currentIndex + 1} / ${photos.length}`;
-
-    lightbox.classList.add("active");
+    lightboxFirst.classList.add("active");
 }
 
-photos.forEach((photo, index) => {
+photosFirst.forEach((photo, index) => {
     photo.addEventListener("click", () => {
-        openGallery(index);
+        openGalleryFirst(index);
     });
 });
 
-closeButton.addEventListener("click", () => {
-    lightbox.classList.remove("active");
+closeButtonFirst.addEventListener("click", () => {
+    lightboxFirst.classList.remove("active");
 });
 
-lightbox.addEventListener("click", (event) => {
-    if (event.target === lightbox) {
-        lightbox.classList.remove("active");
+nextButtonFirst.addEventListener("click", () => {
+    currentIndexFirst++;
+
+    if (currentIndexFirst >= photosFirst.length) {
+        currentIndexFirst = 0;
     }
+
+    openGalleryFirst(currentIndexFirst);
 });
 
-nextButton.addEventListener("click", () => {
-    currentIndex++;
+prevButtonFirst.addEventListener("click", () => {
+    currentIndexFirst--;
 
-    if (currentIndex >= photos.length) {
-        currentIndex = 0;
+    if (currentIndexFirst < 0) {
+        currentIndexFirst = photosFirst.length - 1;
     }
 
-    openGallery(currentIndex);
+    openGalleryFirst(currentIndexFirst);
 });
 
-prevButton.addEventListener("click", () => {
-    currentIndex--;
-
-    if (currentIndex < 0) {
-        currentIndex = photos.length - 1;
-    }
-
-    openGallery(currentIndex);
-});
-
-document.addEventListener("keydown", (event) => {
-    if (!lightbox.classList.contains("active")) return;
-
-    if (event.key === "Escape") {
-        lightbox.classList.remove("active");
-    }
-
-    if (event.key === "ArrowRight") {
-        nextButton.click();
-    }
-
-    if (event.key === "ArrowLeft") {
-        prevButton.click();
+lightboxFirst.addEventListener("click", (event) => {
+    if (event.target === lightboxFirst) {
+        lightboxFirst.classList.remove("active");
     }
 });
 
-let touchStartX = 0;
-let touchEndX = 0;
 
-lightbox.addEventListener("touchstart", (event) => {
-    touchStartX = event.changedTouches[0].screenX;
-});
-
-lightbox.addEventListener("touchend", (event) => {
-    touchEndX = event.changedTouches[0].screenX;
-
-    handleSwipe();
-});
-
-function handleSwipe() {
-    const swipeDistance = touchEndX - touchStartX;
-
-    
-    if (Math.abs(swipeDistance) < 50) {
-        return;
-    }
-
-   
-    if (swipeDistance < 0) {
-        nextPhoto();
-    }
-
-   
-    if (swipeDistance > 0) {
-        previousPhoto();
-    }
-}
-
+// ==============================
 // Друга галерея
+// ==============================
 
 const photosSecond = document.querySelectorAll(".gallery-second img");
 const lightboxSecond = document.getElementById("lightboxSecond");
-
-const lightboxImageSecond =
-    document.getElementById("lightboxImageSecond");
-
-const closeButtonSecond =
-    document.getElementById("lightboxCloseSecond");
-
-const prevButtonSecond =
-    document.getElementById("lightboxPrevSecond");
-
-const nextButtonSecond =
-    document.getElementById("lightboxNextSecond");
-
-const counterSecond =
-    document.getElementById("lightboxCounterSecond");
+const lightboxImageSecond = document.getElementById("lightboxImageSecond");
+const closeButtonSecond = document.getElementById("lightboxCloseSecond");
+const prevButtonSecond = document.getElementById("lightboxPrevSecond");
+const nextButtonSecond = document.getElementById("lightboxNextSecond");
+const counterSecond = document.getElementById("lightboxCounterSecond");
 
 let currentIndexSecond = 0;
 
 function openGallerySecond(index) {
     currentIndexSecond = index;
 
-    lightboxImageSecond.src =
-        photosSecond[currentIndexSecond].src;
-
-    lightboxImageSecond.alt =
-        photosSecond[currentIndexSecond].alt;
+    lightboxImageSecond.src = photosSecond[currentIndexSecond].src;
+    lightboxImageSecond.alt = photosSecond[currentIndexSecond].alt;
 
     counterSecond.textContent =
         `${currentIndexSecond + 1} / ${photosSecond.length}`;
@@ -143,24 +87,15 @@ function openGallerySecond(index) {
     lightboxSecond.classList.add("active");
 }
 
-
-
-
 photosSecond.forEach((photo, index) => {
     photo.addEventListener("click", () => {
         openGallerySecond(index);
     });
 });
 
-
-
-
 closeButtonSecond.addEventListener("click", () => {
     lightboxSecond.classList.remove("active");
 });
-
-
-
 
 nextButtonSecond.addEventListener("click", () => {
     currentIndexSecond++;
@@ -172,9 +107,6 @@ nextButtonSecond.addEventListener("click", () => {
     openGallerySecond(currentIndexSecond);
 });
 
-
-
-
 prevButtonSecond.addEventListener("click", () => {
     currentIndexSecond--;
 
@@ -185,9 +117,6 @@ prevButtonSecond.addEventListener("click", () => {
     openGallerySecond(currentIndexSecond);
 });
 
-
-
-
 lightboxSecond.addEventListener("click", (event) => {
     if (event.target === lightboxSecond) {
         lightboxSecond.classList.remove("active");
@@ -195,28 +124,74 @@ lightboxSecond.addEventListener("click", (event) => {
 });
 
 
-
+// ==============================
+// Клавіатура
+// ==============================
 
 document.addEventListener("keydown", (event) => {
-    if (!lightboxSecond.classList.contains("active")) {
-        return;
+
+    if (lightboxFirst.classList.contains("active")) {
+
+        if (event.key === "Escape") {
+            lightboxFirst.classList.remove("active");
+        }
+
+        if (event.key === "ArrowRight") {
+            nextButtonFirst.click();
+        }
+
+        if (event.key === "ArrowLeft") {
+            prevButtonFirst.click();
+        }
     }
 
-    if (event.key === "Escape") {
-        lightboxSecond.classList.remove("active");
-    }
+    if (lightboxSecond.classList.contains("active")) {
 
-    if (event.key === "ArrowRight") {
-        nextButtonSecond.click();
-    }
+        if (event.key === "Escape") {
+            lightboxSecond.classList.remove("active");
+        }
 
-    if (event.key === "ArrowLeft") {
-        prevButtonSecond.click();
+        if (event.key === "ArrowRight") {
+            nextButtonSecond.click();
+        }
+
+        if (event.key === "ArrowLeft") {
+            prevButtonSecond.click();
+        }
     }
 });
 
 
+// ==============================
+// Свайп першої галереї
+// ==============================
 
+let touchStartXFirst = 0;
+
+lightboxFirst.addEventListener("touchstart", (event) => {
+    touchStartXFirst = event.changedTouches[0].screenX;
+}, { passive: true });
+
+lightboxFirst.addEventListener("touchend", (event) => {
+
+    const touchEndX = event.changedTouches[0].screenX;
+    const swipeDistance = touchEndX - touchStartXFirst;
+
+    if (Math.abs(swipeDistance) < 50) {
+        return;
+    }
+
+    if (swipeDistance < 0) {
+        nextButtonFirst.click();
+    } else {
+        prevButtonFirst.click();
+    }
+});
+
+
+// ==============================
+// Свайп другої галереї
+// ==============================
 
 let touchStartXSecond = 0;
 
@@ -225,11 +200,9 @@ lightboxSecond.addEventListener("touchstart", (event) => {
 }, { passive: true });
 
 lightboxSecond.addEventListener("touchend", (event) => {
-    const touchEndXSecond =
-        event.changedTouches[0].screenX;
 
-    const swipeDistance =
-        touchEndXSecond - touchStartXSecond;
+    const touchEndX = event.changedTouches[0].screenX;
+    const swipeDistance = touchEndX - touchStartXSecond;
 
     if (Math.abs(swipeDistance) < 50) {
         return;
