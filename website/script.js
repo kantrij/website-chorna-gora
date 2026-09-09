@@ -214,3 +214,171 @@ lightboxSecond.addEventListener("touchend", (event) => {
         prevButtonSecond.click();
     }
 });
+
+// ==============================
+// Галерея печери
+// ==============================
+
+const photosCave = document.querySelectorAll(".gallery-cave img");
+
+const lightboxCave = document.getElementById("lightboxCave");
+
+const lightboxImageCave =
+    document.getElementById("lightboxImageCave");
+
+const closeButtonCave =
+    document.getElementById("lightboxCloseCave");
+
+const prevButtonCave =
+    document.getElementById("lightboxPrevCave");
+
+const nextButtonCave =
+    document.getElementById("lightboxNextCave");
+
+const counterCave =
+    document.getElementById("lightboxCounterCave");
+
+let currentIndexCave = 0;
+
+
+// Відкрити фото
+
+function openGalleryCave(index) {
+
+    currentIndexCave = index;
+
+    lightboxImageCave.src =
+        photosCave[currentIndexCave].src;
+
+    lightboxImageCave.alt =
+        photosCave[currentIndexCave].alt;
+
+    counterCave.textContent =
+        `${currentIndexCave + 1} / ${photosCave.length}`;
+
+    lightboxCave.classList.add("active");
+}
+
+
+// Натискання на фото
+
+photosCave.forEach((photo, index) => {
+
+    photo.addEventListener("click", () => {
+        openGalleryCave(index);
+    });
+
+});
+
+
+// Закрити
+
+closeButtonCave.addEventListener("click", () => {
+
+    lightboxCave.classList.remove("active");
+
+});
+
+
+// Наступне фото
+
+nextButtonCave.addEventListener("click", () => {
+
+    currentIndexCave++;
+
+    if (currentIndexCave >= photosCave.length) {
+        currentIndexCave = 0;
+    }
+
+    openGalleryCave(currentIndexCave);
+
+});
+
+
+// Попереднє фото
+
+prevButtonCave.addEventListener("click", () => {
+
+    currentIndexCave--;
+
+    if (currentIndexCave < 0) {
+        currentIndexCave = photosCave.length - 1;
+    }
+
+    openGalleryCave(currentIndexCave);
+
+});
+
+
+// Закриття по темному фону
+
+lightboxCave.addEventListener("click", (event) => {
+
+    if (event.target === lightboxCave) {
+        lightboxCave.classList.remove("active");
+    }
+
+});
+
+
+// Клавіатура
+
+document.addEventListener("keydown", (event) => {
+
+    if (!lightboxCave.classList.contains("active")) {
+        return;
+    }
+
+    if (event.key === "Escape") {
+        lightboxCave.classList.remove("active");
+    }
+
+    if (event.key === "ArrowRight") {
+        nextButtonCave.click();
+    }
+
+    if (event.key === "ArrowLeft") {
+        prevButtonCave.click();
+    }
+
+});
+
+
+// Свайп на телефоні
+
+let touchStartXCave = 0;
+
+lightboxCave.addEventListener(
+    "touchstart",
+    (event) => {
+
+        touchStartXCave =
+            event.changedTouches[0].screenX;
+
+    },
+    { passive: true }
+);
+
+
+lightboxCave.addEventListener(
+    "touchend",
+    (event) => {
+
+        const touchEndXCave =
+            event.changedTouches[0].screenX;
+
+        const swipeDistance =
+            touchEndXCave - touchStartXCave;
+
+        if (Math.abs(swipeDistance) < 50) {
+            return;
+        }
+
+        if (swipeDistance < 0) {
+            nextButtonCave.click();
+        } else {
+            prevButtonCave.click();
+        }
+
+    }
+);
