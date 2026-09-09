@@ -308,6 +308,39 @@ a{
     }
 }
 
+/* печера */
+
+.content-section3{
+       display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.text-section-5{
+    flex: 1; 
+    min-width: 0; 
+    color: white;
+    font-weight: 500;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.text-section-6{
+    flex: 1; 
+    min-width: 0; 
+    color: white;
+    font-weight: 500;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
 /* Телефон */
 
 @media (max-width: 700px) {
