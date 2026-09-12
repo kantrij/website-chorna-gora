@@ -478,47 +478,138 @@ a{
 
 /* банер */
 
-/* Біла смуга-контейнер */
 .banner {
-  background-color: #ffffff;
-  display: flex !important;
-  flex-direction: row !important;     /* Чітко в один рядок */
-  flex-wrap: nowrap !important;        /* Забороняємо перенос тексту під логотипи */
-  align-items: center !important;      /* Вирівнювання по вертикальній осі */
-  justify-content: space-between !important;
-  padding: 15px 40px !important;       /* Відступи від країв екрана (ліворуч/праворуч) */
-  box-sizing: border-box !important;
-  width: 100% !important;
-  gap: 30px !important;                /* Відстань між блоком логотипів і текстом */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 40px;
+    gap: 40px;
+
+    background-color: #ffffff;
+    box-sizing: border-box;
 }
 
-/* Список логотипів */
+/* Логотипи зліва */
 .banner_list {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 15px !important;                 /* Відстань між самими логотипами */
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  flex-shrink: 0 !important;           /* Забороняємо логотипам стискатися */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+
+    gap: 20px;
+
+    margin: 0;
+    padding: 0;
+
+    flex: 1;
+    min-width: 0;
+
+    list-style: none;
 }
 
-/* Самі картини логотипів */
+/* Окремий логотип */
+.baner_images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
 .baner_images img {
-  height: 60px !important;              /* Компактна висота логотипів */
-  width: auto !important;
-  object-fit: contain !important;
+    display: block;
+
+    width: auto;
+    height: 60px;
+    max-width: 110px;
+
+    object-fit: contain;
 }
 
-/* Текст праворуч від логотипів */
+/* Текст справа */
 .footer-text {
-  color: #333333 !important;
-  font-size: 10px !important;           /* Маленький шрифт, як на макеті */
-  line-height: 1.35 !important;
-  margin: 0 !important;
-  max-width: 600px !important;          /* Фіксована ширина для гарного блоку тексту */
-  flex-shrink: 1 !important;
+    flex: 0 1 400px;
+
+    margin: 0;
+
+    color: #333333;
+    font-size: 10px;
+    line-height: 1.4;
+
+    text-align: left;
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .banner {
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 20px 15px;
+        gap: 20px;
+
+        background-color: #ffffff;
+    }
+
+    /* Логотипи у два рядки */
+    .banner_list {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        justify-items: center;
+        align-items: center;
+
+        gap: 15px 10px;
+
+        flex: none;
+    }
+
+    .baner_images {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .baner_images img {
+        width: auto;
+        height: 45px;
+        max-width: 75px;
+
+        object-fit: contain;
+    }
+
+    /* Текст під логотипами */
+    .footer-text {
+        width: 100%;
+        max-width: 100%;
+
+        flex: none;
+
+        margin: 0;
+
+        font-size: 9px;
+        line-height: 1.4;
+
+        text-align: center;
+    }
 }
 
 /* Телефон */
@@ -792,7 +883,13 @@ a{
 }
 
 @media (max-width: 700px) {
+/* =========================
+   MOBILE FIX
+========================= */
 
+@media (max-width: 700px) {
+
+    /* Не даємо сторінці ставати ширшою за екран */
     html,
     body {
         width: 100%;
@@ -800,140 +897,399 @@ a{
         overflow-x: hidden;
     }
 
-    /* Екстрена допомога */
+
+    /* Основні секції */
+    .content-container,
+    .content-section,
+    .content-section2,
+    .content-section3 {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+
+
+    /* Текст */
+    .text-column,
+    .text-section,
+    .text-section1,
+    .text-section-3,
+    .text-section-4,
+    .text-section-5,
+    .text-section-6 {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+
+    /* Зображення */
+    .map-img,
+    .marking-img,
+    .prof-img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+
+    /* Галереї */
+    .gallery,
+    .gallery-second,
+    .gallery-cave {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .gallery img,
+    .gallery-second img,
+    .gallery-cave img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+
+    /* =========================
+       EMERGENCY
+    ========================= */
+
     .emergency-section {
-        width: 100% !important;
-        max-width: 100% !important;
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 15px !important;
+        box-sizing: border-box;
+
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 20px !important;
-        padding: 30px 15px !important;
-        margin: 30px 0 !important;
-        box-sizing: border-box !important;
     }
 
     .emergency-content {
-        width: 100% !important;
-        max-width: 100% !important;
-        display: block !important;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .emergency-banner {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-height: 120px !important;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
         display: flex !important;
-        flex-direction: row !important;
         align-items: center !important;
-        justify-content: space-between !important;
         gap: 10px !important;
-        box-sizing: border-box !important;
-        overflow: hidden !important;
     }
 
     .emergency-icon {
-        width: auto !important;
-        flex-shrink: 0 !important;
-        margin: 0 !important;
+        flex-shrink: 0;
+        width: 55px;
+        margin-right: 0 !important;
     }
 
     .emergency-icon img {
-        width: auto !important;
-        height: 65px !important;
-        max-width: 65px !important;
-        object-fit: contain !important;
+        width: 55px;
+        height: auto !important;
     }
 
     .emergency-text {
-        flex: 1 !important;
-        min-width: 0 !important;
+        flex: 1;
+        min-width: 0;
+
         height: auto !important;
-        font-size: 12px !important;
-        line-height: 1.3 !important;
+
+        font-size: 13px !important;
+        line-height: 1.2 !important;
     }
 
     .emergency-number {
-        flex-shrink: 0 !important;
-        font-size: 50px !important;
+        flex-shrink: 0;
+
+        margin-left: 0 !important;
+        padding-right: 0 !important;
+
+        font-size: 58px !important;
         line-height: 1 !important;
-        padding: 0 !important;
-        margin: 0 !important;
     }
 
 
-    /* Нижній блок з логотипами */
+    /* =========================
+       PARTNERS BANNER
+    ========================= */
+
     .banner {
         width: 100% !important;
+        max-width: 100% !important;
+
         display: flex !important;
         flex-direction: column !important;
         flex-wrap: nowrap !important;
+
         align-items: center !important;
-        justify-content: center !important;
-        gap: 20px !important;
+
         padding: 20px 15px !important;
+        gap: 20px !important;
+
         box-sizing: border-box !important;
+
+        overflow: hidden;
     }
 
     .banner_list {
         width: 100% !important;
+        max-width: 100% !important;
+
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: wrap !important;
+
         justify-content: center !important;
         align-items: center !important;
-        gap: 12px !important;
-        padding: 0 !important;
-        margin: 0 !important;
+
+        gap: 10px !important;
+
+        flex-shrink: 1 !important;
     }
 
     .baner_images {
-        flex-shrink: 0 !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .baner_images img {
-        height: 45px !important;
         width: auto !important;
-        max-width: 100px !important;
+        max-width: 85px !important;
+        height: 45px !important;
         object-fit: contain !important;
     }
 
     .footer-text {
         width: 100% !important;
-        max-width: 600px !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+
         font-size: 9px !important;
-        line-height: 1.4 !important;
-        text-align: center !important;
-        box-sizing: border-box !important;
-    }
+        line-height: 1.35 !important;
 
-
-    /* Зображення на головній */
-    .map-img,
-    .prof-img,
-    .marking-img {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        display: block !important;
-    }
-
-
-    /* Галереї */
-    .gallery {
-        width: 100% !important;
-        max-width: 100% !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 10px !important;
-        padding: 0 15px !important;
-        box-sizing: border-box !important;
-    }
-
-    .gallery img {
-        width: 100% !important;
-        height: 150px !important;
-        object-fit: cover !important;
+        text-align: center;
     }
 }
+}
 
+
+/* =========================
+   EMERGENCY + PARTNERS
+========================= */
+
+.emergency-section {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+
+    padding: 0 60px 0 0 !important;
+    margin: 0 !important;
+
+    box-sizing: border-box;
+}
+
+/* Блок 112 зверху праворуч */
+.emergency-content {
+    width: 100%;
+    display: flex !important;
+    justify-content: flex-end !important;
+
+    margin-bottom: 0 !important;
+}
+
+.emergency-banner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+
+    gap: 30px !important;
+}
+
+.emergency-icon {
+    display: flex !important;
+    align-items: center !important;
+
+    margin-right: 15px !important;
+}
+
+.emergency-icon img {
+    height: 100px !important;
+    width: auto !important;
+}
+
+.emergency-text {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+
+    height: 110px !important;
+
+    color: white !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+}
+
+.emergency-text p {
+    margin: 0 !important;
+}
+
+.emergency-number {
+    margin-left: auto !important;
+    padding-right: 25px !important;
+
+    color: white !important;
+    font-size: 105px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+}
+
+
+/* =========================
+   PARTNERS BANNER
+========================= */
+
+.banner {
+    width: calc(100% + 60px) !important;
+    margin-left: -60px !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    padding: 20px 40px !important;
+
+    background-color: white !important;
+    box-sizing: border-box !important;
+
+    gap: 40px !important;
+}
+
+.banner_list {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+
+    gap: 20px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    flex-shrink: 0 !important;
+}
+
+.baner_images {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.baner_images img {
+    width: auto !important;
+    height: 60px !important;
+    object-fit: contain !important;
+}
+
+.footer-text {
+    max-width: 600px !important;
+
+    margin: 0 !important;
+
+    color: #333 !important;
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+
+    text-align: left !important;
+}
+
+@media (max-width: 700px) {
+
+    .emergency-section {
+        width: 100% !important;
+
+        align-items: center !important;
+
+        padding: 30px 15px 0 !important;
+        margin: 0 !important;
+    }
+
+    .emergency-content {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .emergency-banner {
+        width: 100% !important;
+
+        justify-content: center !important;
+
+        gap: 10px !important;
+    }
+
+    .emergency-icon img {
+        height: 70px !important;
+    }
+
+    .emergency-text {
+        height: 80px !important;
+        font-size: 13px !important;
+    }
+
+    .emergency-number {
+        font-size: 58px !important;
+        padding-right: 0 !important;
+    }
+
+    .banner {
+        width: calc(100% + 30px) !important;
+        margin-left: -15px !important;
+
+        flex-direction: column !important;
+
+        padding: 20px 15px !important;
+        gap: 20px !important;
+    }
+
+    .banner_list {
+        width: 100% !important;
+
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+
+        justify-items: center !important;
+        align-items: center !important;
+
+        gap: 15px 10px !important;
+    }
+
+    .baner_images img {
+        height: 45px !important;
+        max-width: 75px !important;
+    }
+
+    .footer-text {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        font-size: 9px !important;
+        text-align: center !important;
+    }
+}
