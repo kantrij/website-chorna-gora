@@ -392,6 +392,116 @@ a{
     }
 }
 
+.emergency-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 80px;
+
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+
+/* Телефон */
+
+.emergency-phone {
+      flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0;
+}
+
+.emergency-phone img {
+    display: block;
+
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+
+/* Права частина */
+
+.emergency-content {
+ flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* Блок 112 */
+
+.emergency-banner {
+    width: 100%;
+    max-width: 650px;
+    min-height: 190px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #003F2A;
+    color: white;
+
+    box-sizing: border-box;
+}
+
+
+/* Іконка телефону */
+
+.emergency-icon {
+    width: 110px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 90px;
+    line-height: 1;
+}
+
+
+/* Текст */
+
+.emergency-text {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    height: 110px;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.emergency-text p {
+    margin: 0;
+}
+
+
+/* 112 */
+
+.emergency-number {
+    margin-left: auto;
+
+    font-size: 105px;
+    font-weight: 800;
+    line-height: 1;
+
+    padding-right: 25px;
+}
+
+
+
+
+
 /* Телефон */
 
 @media (max-width: 700px) {
@@ -602,4 +712,60 @@ a{
 
         box-sizing: border-box;
     }
+}
+
+@media (max-width: 700px) {
+
+    .emergency-section {
+        flex-direction: column;
+
+        width: 100%;
+        max-width: 100%;
+
+        gap: 30px;
+
+        padding: 30px 15px;
+        margin-top: 50px;
+    }
+
+
+    .emergency-phone {
+        width: 100%;
+    }
+
+    .emergency-phone img {
+        width: 80%;
+        max-width: 350px;
+    }
+
+
+    .emergency-content {
+        width: 100%;
+    }
+
+
+    .emergency-banner {
+        width: 100%;
+        min-height: 130px;
+    }
+
+
+    .emergency-icon {
+        width: 65px;
+        font-size: 55px;
+    }
+
+
+    .emergency-text {
+        height: 80px;
+
+        font-size: 13px;
+    }
+
+
+    .emergency-number {
+        font-size: 58px;
+        padding-right: 10px;
+    }
+
 }
