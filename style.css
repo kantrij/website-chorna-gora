@@ -500,23 +500,47 @@ a{
 
 /* банер */
 
-.banner{
-    padding-block: 60px;
-    background-color: white;
-    width: 100%;
+/* Біла смуга-контейнер */
+.banner {
+  background-color: #ffffff;
+  display: flex !important;
+  flex-direction: row !important;     /* Чітко в один рядок */
+  flex-wrap: nowrap !important;        /* Забороняємо перенос тексту під логотипи */
+  align-items: center !important;      /* Вирівнювання по вертикальній осі */
+  justify-content: space-between !important;
+  padding: 15px 40px !important;       /* Відступи від країв екрана (ліворуч/праворуч) */
+  box-sizing: border-box !important;
+  width: 100% !important;
+  gap: 30px !important;                /* Відстань між блоком логотипів і текстом */
 }
 
-.banner_list{
-    display:flex;
-    justify-content:space-around;
-    align-items: center;
+/* Список логотипів */
+.banner_list {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 15px !important;                 /* Відстань між самими логотипами */
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;           /* Забороняємо логотипам стискатися */
 }
 
-.baner_images{
-    width: 300px;       
-  height: 200px;       
-  object-fit: cover;   
-  object-position: center;
+/* Самі картини логотипів */
+.baner_images img {
+  height: 60px !important;              /* Компактна висота логотипів */
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+/* Текст праворуч від логотипів */
+.footer-text {
+  color: #333333 !important;
+  font-size: 10px !important;           /* Маленький шрифт, як на макеті */
+  line-height: 1.35 !important;
+  margin: 0 !important;
+  max-width: 600px !important;          /* Фіксована ширина для гарного блоку тексту */
+  flex-shrink: 1 !important;
 }
 
 /* Телефон */
