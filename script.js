@@ -1,6 +1,6 @@
-// ==============================
+
 // Перша галерея
-// ==============================
+
 
 const photosFirst = document.querySelectorAll(".gallery-first img");
 const lightboxFirst = document.getElementById("lightboxFirst");
@@ -61,9 +61,9 @@ lightboxFirst.addEventListener("click", (event) => {
 });
 
 
-// ==============================
+
 // Друга галерея
-// ==============================
+
 
 const photosSecond = document.querySelectorAll(".gallery-second img");
 const lightboxSecond = document.getElementById("lightboxSecond");
@@ -124,9 +124,9 @@ lightboxSecond.addEventListener("click", (event) => {
 });
 
 
-// ==============================
+
 // Клавіатура
-// ==============================
+
 
 document.addEventListener("keydown", (event) => {
 
@@ -162,9 +162,9 @@ document.addEventListener("keydown", (event) => {
 });
 
 
-// ==============================
+
 // Свайп першої галереї
-// ==============================
+
 
 let touchStartXFirst = 0;
 
@@ -189,9 +189,9 @@ lightboxFirst.addEventListener("touchend", (event) => {
 });
 
 
-// ==============================
+
 // Свайп другої галереї
-// ==============================
+
 
 let touchStartXSecond = 0;
 
@@ -215,9 +215,9 @@ lightboxSecond.addEventListener("touchend", (event) => {
     }
 });
 
-// ==============================
+
 // Галерея печери
-// ==============================
+
 
 const photosCave = document.querySelectorAll(".gallery-cave img");
 
