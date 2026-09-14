@@ -394,14 +394,14 @@ a{
 
 /*  секція із телефончиком */
 
-/* Зсув та вирівнювання секції екстреної допомоги */
+
 .emergency-section {
   width: 100%;
   display: flex !important;
-  justify-content: flex-end !important; /* Притискає все праворуч */
-  padding-right: 60px !important;       /* Відступ від правого краю екрана */
+  justify-content: flex-end !important; 
+  padding-right: 60px !important;      
   box-sizing: border-box !important;
-  margin-top: -20px !important;        /* Піднімає секцію вище */
+  margin-top: -20px !important;        
   margin-bottom: 40px !important;
 }
 
@@ -413,11 +413,11 @@ a{
 .emergency-banner {
   display: flex !important;
   align-items: center !important;
-  gap: 30px !important;                 /* Відстань між іконкою, текстом і 112 */
+  gap: 20px !important;                 
 }
 
 .emergency-icon {
-  margin-right: 15px !important;        /* Відсуває іконку далі вліво від тексту */
+  margin-right: 15px !important;        
   display: flex !important;
   align-items: center !important;
 }
@@ -445,7 +445,7 @@ a{
   line-height: 1 !important;
 }
 
-/* Текст */
+
 
 .emergency-text {
     display: flex;
@@ -464,7 +464,7 @@ a{
 }
 
 
-/* 112 */
+
 
 .emergency-number {
     margin-left: auto;
@@ -485,7 +485,7 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px; /* створює акуратні відступи 40px зліва та справа */
+  padding: 20px 40px; 
   margin: 0;
 }
 
@@ -496,7 +496,7 @@ a{
   align-items: center;
   list-style: none;
   margin: 0;
-  padding: 0; /* ОБОВ'ЯЗКОВО: скидаємо браузерні відступи списку */
+  padding: 0;
   gap: 15px;
 }
 
@@ -523,9 +523,9 @@ a{
 }
 
 
-/* =========================
+/* 
    MOBILE
-========================= */
+ */
 
 @media (max-width: 700px) {
 
@@ -542,7 +542,7 @@ a{
         background-color: #ffffff;
     }
 
-    /* Логотипи у два рядки */
+
     .banner_list {
         width: 100%;
 
@@ -574,7 +574,7 @@ a{
         object-fit: contain;
     }
 
-    /* Текст під логотипами */
+    
     .footer-text {
         width: 100%;
         max-width: 100%;
@@ -628,7 +628,7 @@ a{
 
 @media (max-width: 700px) {
 
-    /* Загальна ширина */
+    
     * {
         box-sizing: border-box;
     }
@@ -861,13 +861,13 @@ a{
 }
 
 @media (max-width: 700px) {
-/* =========================
+/* 
    MOBILE FIX
-========================= */
+ */
 
 @media (max-width: 700px) {
 
-    /* Не даємо сторінці ставати ширшою за екран */
+    
     html,
     body {
         width: 100%;
@@ -876,7 +876,7 @@ a{
     }
 
 
-    /* Основні секції */
+   
     .content-container,
     .content-section,
     .content-section2,
@@ -889,7 +889,7 @@ a{
     }
 
 
-    /* Текст */
+   
     .text-column,
     .text-section,
     .text-section1,
@@ -904,7 +904,7 @@ a{
     }
 
 
-    /* Зображення */
+   
     .map-img,
     .marking-img,
     .prof-img {
@@ -916,7 +916,7 @@ a{
     }
 
 
-    /* Галереї */
+
     .gallery,
     .gallery-second,
     .gallery-cave {
@@ -939,9 +939,7 @@ a{
     }
 
 
-    /* =========================
-       EMERGENCY
-    ========================= */
+
 
     .emergency-section {
         width: 100%;
@@ -1001,9 +999,7 @@ a{
     }
 
 
-    /* =========================
-       PARTNERS BANNER
-    ========================= */
+
 
     .banner {
         width: 100% !important;
@@ -1067,9 +1063,7 @@ a{
 }
 
 
-/* =========================
-   EMERGENCY + PARTNERS
-========================= */
+
 
 .emergency-section {
     width: 100%;
@@ -1083,7 +1077,7 @@ a{
     box-sizing: border-box;
 }
 
-/* Блок 112 зверху праворуч */
+
 .emergency-content {
     width: 100%;
     display: flex !important;
@@ -1140,9 +1134,7 @@ a{
 }
 
 
-/* =========================
-   PARTNERS BANNER
-========================= */
+
 
 .banner {
     width: calc(100% + 60px) !important;
@@ -1237,63 +1229,63 @@ a{
     }
 }
 
-/* вфівіф */
 
-/* --- АДАПТИВНІ СТИЛІ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ (екран менше 768px) --- */
+
+
 @media screen and (max-width: 768px) {
-  /* 1. Робимо сам банер на всю ширину та вертикальним */
+ 
   .banner {
     width: 100% !important;
     max-width: 100% !important;
     left: 0 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    flex-direction: column !important; /* елементи один під одним */
-    align-items: center !important;    /* центруємо вміст */
-    padding: 20px 15px !important;    /* менші відступи по боках */
-    gap: 20px !important;             /* відстань між лого та текстом */
+    flex-direction: column !important; 
+    align-items: center !important;    
+    padding: 20px 15px !important;    
+    gap: 20px !important;             
     box-sizing: border-box !important;
   }
 
-  /* 2. Налаштовуємо список логотипів */
+  
   .banner_list {
-    flex-direction: row !important;  /* логотипи в ряд... */
-    flex-wrap: wrap !important;      /* ...але переносяться, якщо не влазять */
-    justify-content: center !important; /* центруємо ряд лого */
+    flex-direction: row !important;  
+    flex-wrap: wrap !important;      
+    justify-content: center !important; 
     width: 100% !important;
-    gap: 10px !important;            /* менша відстань між лого */
+    gap: 10px !important;            
     padding: 0 !important;
     margin: 0 !important;
   }
 
-  /* 3. Кожен елемент з лого */
+  
   .baner_images {
-    width: auto !important; /* не обмежуємо ширину елемента */
+    width: auto !important; 
     display: flex !important;
     justify-content: center !important;
   }
 
-  /* 4. Самі зображення логотипів */
+ 
   .baner_images img {
-    height: 30px !important; /* зменшуємо висоту лого на мобільному */
+    height: 30px !important; 
     width: auto !important;
     object-fit: contain !important;
   }
 
-  /* 5. Текст на мобільному */
+ 
   .banner .footer-text {
-    max-width: 100% !important; /* текст на всю ширину */
-    text-align: center !important; /* центруємо текст */
-    font-size: 10px !important;   /* трохи менший шрифт */
+    max-width: 100% !important;
+    text-align: center !important; 
+    font-size: 10px !important;   
     line-height: 1.4 !important;
     margin: 0 !important;
-    color: #333333 !important;   /* гарантовано темний колір */
+    color: #333333 !important;  
   }
 
-  /* ДОДАТКОВО: Прибираємо зелені поля по боках у батьківського блоку на мобільному */
+  
   body, html {
     margin: 0 !important;
     padding: 0 !important;
-    overflow-x: hidden !important; /* щоб не було горизонтального скролу */
+    overflow-x: hidden !important; 
   } 
 }
