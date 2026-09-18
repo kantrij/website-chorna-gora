@@ -11,23 +11,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-   <header class="header"> 
-     <div class="header_container">
-        <nav class="header_nav">
-            <p class="header_logo">Загадка Чорної Гори</p>
-            <ul class="header_list">
-                <li class="header_list-item">
-                    <a class="header_list-link" href="#start">Головна</a>
-                </li>
-                <li class="header_list-item">
-                    <a class="header_list-link" href="#end">Про нас</a>
-                </li>
-            </ul>
-        </nav>
-     </div>
-   </header>
+    
+    <header class="site-header" id="site-header">
+  <div class="header-top" id="header-top">
+    <a class="header-logo">Загадка Чорної Гори</a>
+    <nav class="header-main-nav">
+      <a href="#route" class="nav-link">Головна</a>
+      <a href="#end" class="nav-link">Про нас</a>
+    </nav>
+  </div>
+
+  <div class="header-sub" id="header-sub">
+    <nav class="header-sub-nav">
+      <a href="#route" class="sub-link">Маршрут</a>
+      <a href="#castle" class="sub-link">Севлюшський замок</a>
+      <a href="#reserve" class="sub-link">Заказник</a>
+      <a href="#cave" class="sub-link">Печера</a>
+    </nav>
+  </div>
+
+  <button type="button" class="header-toggle-btn" id="header-toggle" aria-label="Згорнути підменю">
+    <svg class="toggle-icon" viewBox="0 0 24 24" width="18" height="18">
+      <path d="M6 9l6 6 6-6" fill="none" stroke="#555555" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+</header>
+
    <main>
-<h1 class="main-title" id="start">Туристичний маршрут "Загадка Чорної Гори"</h1>
+<h1 class="main-title" id="route">Туристичний маршрут "Загадка Чорної Гори"</h1>
 <div class="content-container">
 
     <div class="text-column">
@@ -53,7 +64,7 @@
         </ul>
     </div>
 </div>
-   <h2 class="section-tittle">Севлюшський замок XIII — XV ст.Пам'ятка архітектури національного значення</h2>
+   <h2 class="section-tittle" id="castle">Севлюшський замок XIII — XV ст.Пам'ятка архітектури національного значення</h2>
      <section class="content-section">
 
         <div class="text-section1">
@@ -103,7 +114,7 @@
     <div class="lightbox-counter" id="lightboxCounterFirst"></div>
 </div>
 
-<h3 class="section-tittle">Ботанічний заказник "Чорна гора"</h3>
+<h3 class="section-tittle" id="reserve">Ботанічний заказник "Чорна гора"</h3>
   <section class="content-section2">
 
     <div class="text-section-3">
@@ -158,7 +169,7 @@
     <div class="lightbox-counter" id="lightboxCounterSecond"></div>
 </div>
 
-<h3 class="section-tittle">Печера "Морське око"</h3>
+<h3 class="section-tittle" id="cave">Печера "Морське око"</h3>
 <section class="content-section3">
     <div class="text-section-5">
         <p>Таку назву печері дали місцеві мешканці, оскільки вона завершується водоймою, рівень якої залишається стабільним попри непоодинокі спроби її відкачування. Простягається печера вглиб приблизно на 30 м.</p>
@@ -187,6 +198,10 @@
         <img src="images/печера/IMG_6185 1.png" alt="">
         <img src="images/печера/IMG_7290 1.png" alt="">
         <img src="images/печера/IMG_7306 1.png" alt="">
+        <img src="images/печера/p1.jpg" alt="">
+        <img src="images/печера/p2.jpg" alt="">
+        <img src="images/печера/p3.jpg" alt="">
+        <img src="images/печера/p4.jpg" alt="">
 
     </div>
 

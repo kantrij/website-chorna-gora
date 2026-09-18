@@ -382,3 +382,16 @@ lightboxCave.addEventListener(
 
     }
 );
+
+document.addEventListener('DOMContentLoaded', () => {
+  const siteHeader = document.getElementById('site-header');
+  const headerSub = document.getElementById('header-sub');
+  const headerToggle = document.getElementById('header-toggle');
+
+  if (headerToggle && headerSub && siteHeader) {
+    headerToggle.addEventListener('click', () => {
+      headerSub.classList.toggle('is-collapsed');
+      siteHeader.classList.toggle('is-sub-collapsed');
+    });
+  }
+});

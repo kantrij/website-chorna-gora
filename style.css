@@ -5,13 +5,13 @@
 
 html{
     scroll-behavior: smooth;
-    scroll-padding: 100px;
+    scroll-padding: 65px;
 }
 
 body{
      font-family: 'Montserrat';
     background-color: #003F2A;
-
+   
 }
 
 .header{
@@ -24,7 +24,7 @@ body{
 }
 
 main{
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .header_container{
@@ -694,7 +694,161 @@ a{
     }
 }
 
+/*  панель із силками */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: transparent;
+}
+
+.header-top {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  box-sizing: border-box;
+  margin: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.header-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  text-decoration: none;
+}
+
+.header-main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  font-size: 15px;
+  color: #222222;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #08422A;
+}
+
+.header-sub {
+  background-color: #D2D2D2;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  margin: 0;
+  max-height: 120px;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.25s ease;
+}
+
+.site-header.is-sub-collapsed .header-sub {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0;
+}
+
+.header-sub-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.sub-link {
+  font-size: 14px;
+  color: #111111;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.sub-link:hover {
+  color: #08422A;
+}
+
+.header-toggle-btn {
+  position: absolute;
+  top: 100%;
+  right: 40px;
+  width: 44px;
+  height: 26px;
+  background-color: #D2D2D2;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  padding: 0;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+
+.site-header.is-sub-collapsed .toggle-icon {
+  transform: rotate(0deg);
+}
+
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .header-logo {
+    font-size: 17px;
+  }
+
+  .header-main-nav {
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .header-sub {
+    padding: 8px 12px;
+    overflow-x: auto;
+  }
+
+  .header-sub-nav {
+    width: max-content;
+    gap: 14px;
+  }
+
+  .sub-link {
+    font-size: 12px;
+  }
+
+  .header-toggle-btn {
+    right: 15px;
+  }
+}
+
 /* Телефон */
+
 
 @media (max-width: 700px) {
 
@@ -740,6 +894,11 @@ a{
     body {
         width: 100%;
         overflow-x: hidden;
+        padding-top: 75px;
+    }
+
+    main{
+        padding-top: 20px;
     }
 
     .header {
