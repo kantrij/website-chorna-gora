@@ -135,6 +135,20 @@ a{
 
 /* замок */
 
+.route-map-link {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.route-map-link:hover {
+  opacity: 0.8;
+  color: #D2D2D2;
+}
+
 .section-tittle{
     text-align: center;
     color: #ffffff;
@@ -338,10 +352,73 @@ a{
 
 /* фотогалерея печера */
 
-.gallery-cave {
-    margin-bottom: 50px;
+.gallery-card img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
+.gallery-card img:hover {
+  transform: scale(1.02);
+}
+
+.gallery-cave {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.gallery-cave img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-cave img:hover {
+  transform: scale(1.02);
+}
+
+.cave-video-wrapper {
+  max-width: 800px;
+  margin: 20px auto 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.cave-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  background-color: #000000;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+  .gallery-cave {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-cave {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 15px;
+  }
+
+  .cave-video-wrapper {
+    padding: 0 15px;
+  }
+}
 
 @media (max-width: 700px) {
 
@@ -577,7 +654,6 @@ a{
 .about-logo {
   height: 200px;
   width: auto;
-  /* max-width: px; */
   object-fit: contain;
   display: block;
 }
@@ -621,6 +697,137 @@ a{
   }
 }
 
+/* галерея настройка */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 99999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  border-radius: 4px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 100000;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+  opacity: 0.75;
+  transform: scale(1.1);
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100000;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-prev {
+  left: 25px;
+}
+
+.lightbox-next {
+  right: 25px;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 14px;
+  border-radius: 20px;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .lightbox-image {
+    max-width: 95vw;
+    max-height: 80vh;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+
+  .lightbox-close {
+    top: 15px;
+    right: 15px;
+    font-size: 34px;
+  }
+
+  .lightbox-counter {
+    bottom: 15px;
+    font-size: 13px;
+  }
+}
 
 /* 
    MOBILE
