@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Загадка Чорної Гори - zagadkachornojigoru.com" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Туристичний маршрут «Загадка Чорної Гори»</name>
+    <desc>Пішохідний еколого-історичний маршрут у м. Виноградів: замок Канків, вулканічний заказник Чорна Гора та печера Морське око.</desc>
+    <author>
+      <name>ГО «Фундація розвитку Закарпаття»</name>
+    </author>
+    <time>2024-05-01T08:00:00Z</time>
+  </metadata>
+
+  <!-- Waypoints -->
+  <wpt lat="48.140833" lon="23.039167">
+    <ele>220.0</ele>
+    <name>Точка 1: Замок Канків</name>
+    <desc>Руїни Севлюшського замку XIII-XV ст. Початок пішохідного маршруту з панорамою Виноградова.</desc>
+    <sym>Castle</sym>
+  </wpt>
+
+  <wpt lat="48.146944" lon="23.058333">
+    <ele>508.0</ele>
+    <name>Точка 2: Заказник «Чорна Гора»</name>
+    <desc>Ботанічний заказник загальнодержавного значення, унікальні дубові ліси та релікти флори.</desc>
+    <sym>Forest</sym>
+  </wpt>
+
+  <wpt lat="48.143611" lon="23.051944">
+    <ele>310.0</ele>
+    <name>Точка 3: Печера «Морське око»</name>
+    <desc>Рукотворна скельна печера тамплієрів завдовжки 30 м із постійним рівнем води та легендарними сифонами.</desc>
+    <sym>Cave</sym>
+  </wpt>
+
+  <!-- Track -->
+  <trk>
+    <name>Трек маршруту «Загадка Чорної Гори»</name>
+    <desc>Круговий пішохідний трек довжиною 4.5 км через замок Канків, гірський хребет Чорної гори та печеру Морське око.</desc>
+    <trkseg>
+      <trkpt lat="48.139450" lon="23.035200"><ele>140.0</ele><time>2024-05-01T08:00:00Z</time></trkpt>
+      <trkpt lat="48.140200" lon="23.037100"><ele>175.0</ele><time>2024-05-01T08:10:00Z</time></trkpt>
+      <trkpt lat="48.140833" lon="23.039167"><ele>220.0</ele><time>2024-05-01T08:25:00Z</time></trkpt>
+      <trkpt lat="48.141900" lon="23.042300"><ele>260.0</ele><time>2024-05-01T08:40:00Z</time></trkpt>
+      <trkpt lat="48.143100" lon="23.046500"><ele>320.0</ele><time>2024-05-01T09:00:00Z</time></trkpt>
+      <trkpt lat="48.144800" lon="23.051200"><ele>390.0</ele><time>2024-05-01T09:20:00Z</time></trkpt>
+      <trkpt lat="48.146200" lon="23.055500"><ele>465.0</ele><time>2024-05-01T09:40:00Z</time></trkpt>
+      <trkpt lat="48.146944" lon="23.058333"><ele>508.0</ele><time>2024-05-01T10:00:00Z</time></trkpt>
+      <trkpt lat="48.145800" lon="23.056000"><ele>450.0</ele><time>2024-05-01T10:15:00Z</time></trkpt>
+      <trkpt lat="48.144700" lon="23.053800"><ele>380.0</ele><time>2024-05-01T10:30:00Z</time></trkpt>
+      <trkpt lat="48.143611" lon="23.051944"><ele>310.0</ele><time>2024-05-01T10:45:00Z</time></trkpt>
+      <trkpt lat="48.142200" lon="23.047500"><ele>260.0</ele><time>2024-05-01T11:05:00Z</time></trkpt>
+      <trkpt lat="48.140700" lon="23.041000"><ele>195.0</ele><time>2024-05-01T11:25:00Z</time></trkpt>
+      <trkpt lat="48.139450" lon="23.035200"><ele>140.0</ele><time>2024-05-01T11:45:00Z</time></trkpt>
+    </trkseg>
+  </trk>
+</gpx>
