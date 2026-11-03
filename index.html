@@ -34,6 +34,9 @@
                 <a href="#castle" class="nav-item">Севлюшський замок</a>
                 <a href="#reserve" class="nav-item">Заказник</a>
                 <a href="#cave" class="nav-item">Печера</a>
+                <span class="desktop-nav-divider" aria-hidden="true"></span>
+                <a href="events.html" class="nav-item nav-pill-btn">Події</a>
+                <a href="contacts.html" class="nav-item nav-pill-btn">Контакти</a>
             </nav>
 
             <button class="hamburger-btn" id="hamburger-btn" aria-label="Відкрити меню" aria-expanded="false">
@@ -42,17 +45,22 @@
                 <span class="hamburger-line"></span>
             </button>
         </div>
-
-        <!-- Lightweight Mobile Navigation Drawer -->
-        <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
-            <nav class="mobile-nav">
-                <a href="#route" class="mobile-nav-item">Маршрут</a>
-                <a href="#castle" class="mobile-nav-item">Севлюшський замок</a>
-                <a href="#reserve" class="mobile-nav-item">Заказник</a>
-                <a href="#cave" class="mobile-nav-item">Печера</a>
-            </nav>
-        </div>
     </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <nav class="mobile-nav">
+            <a href="#route" class="mobile-nav-item">Маршрут</a>
+            <a href="#castle" class="mobile-nav-item">Севлюшський замок</a>
+            <a href="#reserve" class="mobile-nav-item">Заказник</a>
+            <a href="#cave" class="mobile-nav-item">Печера</a>
+
+            <div class="mobile-nav-divider"></div>
+
+            <a href="events.html" class="mobile-nav-item">Події</a>
+            <a href="contacts.html" class="mobile-nav-item">Контакти</a>
+        </nav>
+    </div>
 
     <main>
         <!-- Hero Section (First Screen) -->
@@ -62,7 +70,8 @@
 
             <div class="hero-container">
                 <h1 class="hero-title">Загадка Чорної гори</h1>
-                <p class="hero-subtitle">Пішохідний туристичний маршрут, що поєднує руїни замку «Канків», ботанічний заказник «Чорна гора» та печеру «Морське око».</p>
+                <p class="hero-subtitle">Пішохідний туристичний маршрут, що поєднує руїни замку «Канків», ботанічний
+                    заказник «Чорна гора» та печеру «Морське&nbsp;око».</p>
                 <div class="hero-actions">
                     <a href="#route" class="btn btn-hero">Дослідити маршрут</a>
                 </div>
@@ -115,7 +124,8 @@
 
                         <div class="route-graphic-card">
                             <img class="route-graphic-img zoomable" src="images/Маршрут.webp"
-                                alt="Карта маршруту «Загадка Чорної гори»" width="3829" height="2292" loading="lazy" decoding="async">
+                                alt="Карта маршруту «Загадка Чорної гори»" width="3829" height="2292" loading="lazy"
+                                decoding="async">
                         </div>
                         <div class="route-graphic-card">
                             <img class="route-graphic-img zoomable" src="images/Умовні_позначення.webp"
@@ -186,10 +196,12 @@
 
                 <!-- Castle Photos Block 1 (Overview & Reconstruction) -->
                 <div class="editorial-photo-grid grid-cols-2">
-                    <img src="images/замок/замок з висоти.webp" alt="Севлюшський замок «Канків» з висоти пташиного польоту"
-                        class="editorial-grid-photo" data-gallery="castle" data-index="0" loading="lazy" decoding="async">
-                    <img src="images/замок/зпроектований уявний вигляд замку.webp" alt="Архітектурна реконструкція укріплень"
-                        class="editorial-grid-photo" data-gallery="castle" data-index="1" loading="lazy" decoding="async">
+                    <img src="images/замок/замок з висоти.webp"
+                        alt="Севлюшський замок «Канків» з висоти пташиного польоту" class="editorial-grid-photo"
+                        data-gallery="castle" data-index="0" loading="lazy" decoding="async">
+                    <img src="images/замок/зпроектований уявний вигляд замку.webp"
+                        alt="Архітектурна реконструкція укріплень" class="editorial-grid-photo" data-gallery="castle"
+                        data-index="1" loading="lazy" decoding="async">
                 </div>
 
                 <div class="text-columns">
@@ -223,11 +235,14 @@
                 <!-- Castle Photos Block 2 (Historical Archives & Sketches) -->
                 <div class="editorial-photo-grid grid-cols-3">
                     <img src="images/замок/архівне фото замку.webp" alt="Архівне фото замку «Канків»"
-                        class="editorial-grid-photo" data-gallery="castle" data-index="2" loading="lazy" decoding="async">
+                        class="editorial-grid-photo" data-gallery="castle" data-index="2" loading="lazy"
+                        decoding="async">
                     <img src="images/замок/архівне фото замку2.webp" alt="Історичний вигляд замкових мурів"
-                        class="editorial-grid-photo" data-gallery="castle" data-index="3" loading="lazy" decoding="async">
-                    <img src="images/замок/ескіз уявного вигляду замку.webp" alt="Ескіз уявного первісного вигляду замку"
-                        class="editorial-grid-photo" data-gallery="castle" data-index="4" loading="lazy" decoding="async">
+                        class="editorial-grid-photo" data-gallery="castle" data-index="3" loading="lazy"
+                        decoding="async">
+                    <img src="images/замок/ескіз уявного вигляду замку.webp"
+                        alt="Ескіз уявного первісного вигляду замку" class="editorial-grid-photo" data-gallery="castle"
+                        data-index="4" loading="lazy" decoding="async">
                 </div>
 
                 <div class="text-columns">
@@ -264,9 +279,10 @@
                 <!-- Castle Photos Block 3 (Visualization & Chapel) -->
                 <div class="editorial-photo-grid grid-cols-2">
                     <img src="images/замок/Візуалізація.webp" alt="Візуалізація реконструкції замку «Канків»"
-                        class="editorial-grid-photo" data-gallery="castle" data-index="5" loading="lazy" decoding="async">
-                    <img src="images/замок/Капличка.webp" alt="Замкова капличка"
-                        class="editorial-grid-photo" data-gallery="castle" data-index="6" loading="lazy" decoding="async">
+                        class="editorial-grid-photo" data-gallery="castle" data-index="5" loading="lazy"
+                        decoding="async">
+                    <img src="images/замок/Капличка.webp" alt="Замкова капличка" class="editorial-grid-photo"
+                        data-gallery="castle" data-index="6" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
@@ -278,11 +294,12 @@
 
                 <!-- Reserve Photos Block 1 (Landscape & Volcanic Rocks) -->
                 <div class="editorial-photo-grid grid-cols-2">
-                    <img src="images/заказник/місто та заказник.webp" alt="Ботанічний заказник «Чорна гора» та панорама міста"
-                        class="editorial-grid-photo" data-gallery="reserve" data-index="0" loading="lazy" decoding="async">
+                    <img src="images/заказник/Chorna_Hora_(Wynohradiw).webp"
+                        alt="Ботанічний заказник «Чорна гора» та панорама міста" class="editorial-grid-photo"
+                        data-gallery="reserve" data-index="0" loading="lazy" decoding="async">
                     <img src="images/заказник/Відслонення виходу вулканічних порід - андезити, ліпарити, туфи.webp"
-                        alt="Скельні виходи вулканічних порід (андезити, ліпарити, туфи)"
-                        class="editorial-grid-photo" data-gallery="reserve" data-index="1" loading="lazy" decoding="async">
+                        alt="Скельні виходи вулканічних порід (андезити, ліпарити, туфи)" class="editorial-grid-photo"
+                        data-gallery="reserve" data-index="1" loading="lazy" decoding="async">
                 </div>
 
                 <div class="text-columns">
@@ -308,11 +325,14 @@
                 <!-- Reserve Photos Block 2 (Spring Flora) -->
                 <div class="editorial-photo-grid grid-cols-3">
                     <img src="images/заказник/Шафран банатського.webp" alt="Шафран банатський (Crocus banaticus)"
-                        class="editorial-grid-photo" data-gallery="reserve" data-index="2" loading="lazy" decoding="async">
+                        class="editorial-grid-photo" data-gallery="reserve" data-index="2" loading="lazy"
+                        decoding="async">
                     <img src="images/заказник/Білоцвіт весняний.webp" alt="Білоцвіт весняний (Leucojum vernum)"
-                        class="editorial-grid-photo" data-gallery="reserve" data-index="3" loading="lazy" decoding="async">
-                    <img src="images/заказник/Булатка довголиста.webp" alt="Булатка довголиста (Cephalanthera longifolia)"
-                        class="editorial-grid-photo" data-gallery="reserve" data-index="4" loading="lazy" decoding="async">
+                        class="editorial-grid-photo" data-gallery="reserve" data-index="3" loading="lazy"
+                        decoding="async">
+                    <img src="images/заказник/Булатка довголиста.webp"
+                        alt="Булатка довголиста (Cephalanthera longifolia)" class="editorial-grid-photo"
+                        data-gallery="reserve" data-index="4" loading="lazy" decoding="async">
                 </div>
 
                 <div class="text-columns">
@@ -344,11 +364,14 @@
                 <!-- Reserve Photos Block 3 (Rare Plants & Rock Ferns) -->
                 <div class="editorial-photo-grid grid-cols-3">
                     <img src="images/заказник/Аспленій чорний.webp" alt="Аспленій чорний (Asplenium adiantum-nigrum)"
-                        class="editorial-grid-photo" data-gallery="reserve" data-index="5" loading="lazy" decoding="async">
+                        class="editorial-grid-photo" data-gallery="reserve" data-index="5" loading="lazy"
+                        decoding="async">
                     <img src="images/заказник/Гніздівка звичайна.webp" alt="Гніздівка звичайна (Neottia nidus-avis)"
-                        class="editorial-grid-photo" data-gallery="reserve" data-index="6" loading="lazy" decoding="async">
+                        class="editorial-grid-photo" data-gallery="reserve" data-index="6" loading="lazy"
+                        decoding="async">
                     <img src="images/заказник/Сугайник угорський.webp" alt="Сугайник угорський (Doronicum hungaricum)"
-                        class="editorial-grid-photo" data-gallery="reserve" data-index="7" loading="lazy" decoding="async">
+                        class="editorial-grid-photo" data-gallery="reserve" data-index="7" loading="lazy"
+                        decoding="async">
                 </div>
             </div>
         </section>
@@ -364,8 +387,8 @@
                         class="editorial-grid-photo" data-gallery="cave" data-index="0" loading="lazy" decoding="async">
                     <img src="images/печера/p2.webp" alt="Підземна водойма в печері «Морське око»"
                         class="editorial-grid-photo" data-gallery="cave" data-index="1" loading="lazy" decoding="async">
-                    <img src="images/печера/p3.webp" alt="Скельні склепіння підземелля"
-                        class="editorial-grid-photo" data-gallery="cave" data-index="2" loading="lazy" decoding="async">
+                    <img src="images/печера/p3.webp" alt="Скельні склепіння підземелля" class="editorial-grid-photo"
+                        data-gallery="cave" data-index="2" loading="lazy" decoding="async">
                     <img src="images/печера/p4.webp" alt="Внутрішній кам’яний коридор печери"
                         class="editorial-grid-photo" data-gallery="cave" data-index="3" loading="lazy" decoding="async">
                 </div>
@@ -396,9 +419,11 @@
                         <!-- First 2 cave photos moved from bottom row, side-by-side pair -->
                         <div class="cave-col-photos">
                             <img src="images/печера/IMG_6169 1.webp" alt="Дослідження кам’яних галерей печери"
-                                class="editorial-grid-photo" data-gallery="cave" data-index="4" loading="lazy" decoding="async">
+                                class="editorial-grid-photo" data-gallery="cave" data-index="4" loading="lazy"
+                                decoding="async">
                             <img src="images/печера/IMG_6185 1.webp" alt="Скельний прохід у підземеллі"
-                                class="editorial-grid-photo" data-gallery="cave" data-index="5" loading="lazy" decoding="async">
+                                class="editorial-grid-photo" data-gallery="cave" data-index="5" loading="lazy"
+                                decoding="async">
                         </div>
                     </div>
 
@@ -431,8 +456,8 @@
 
                 <!-- Remaining 2 photos neatly below the 2-column block (centered) -->
                 <div class="editorial-photo-grid grid-cols-2 cave-bottom-grid">
-                    <img src="images/печера/IMG_7290 1.webp" alt="Таємничі гроти печери"
-                        class="editorial-grid-photo" data-gallery="cave" data-index="6" loading="lazy" decoding="async">
+                    <img src="images/печера/IMG_7290 1.webp" alt="Таємничі гроти печери" class="editorial-grid-photo"
+                        data-gallery="cave" data-index="6" loading="lazy" decoding="async">
                     <img src="images/печера/IMG_7306 1.webp" alt="Скельні породи підземного тунелю"
                         class="editorial-grid-photo" data-gallery="cave" data-index="7" loading="lazy" decoding="async">
                 </div>
@@ -443,7 +468,8 @@
         <section class="emergency-section">
             <div class="container">
                 <div class="emergency-box">
-                    <img src="images/phone.webp" alt="Phone" class="emergency-icon" width="38" height="38" loading="lazy" decoding="async">
+                    <img src="images/phone.webp" alt="Phone" class="emergency-icon" width="38" height="38"
+                        loading="lazy" decoding="async">
                     <div class="emergency-text">
                         <span class="emergency-ua">Служба екстреної допомоги</span>
                         <span class="emergency-en">In an emergency, dial</span>
@@ -458,13 +484,15 @@
             <div class="container banner-container">
                 <ul class="banner-logos">
                     <li class="banner-logo-item">
-                        <img src="images/Карпатськаий_заповідник.webp" alt="Карпатський заповідник" loading="lazy" decoding="async">
+                        <img src="images/Карпатськаий_заповідник.webp" alt="Карпатський заповідник" loading="lazy"
+                            decoding="async">
                     </li>
                     <li class="banner-logo-item">
                         <img src="images/Герб_Виноградів 1.webp" alt="Герб Виноградова" loading="lazy" decoding="async">
                     </li>
                     <li class="banner-logo-item">
-                        <img src="images/лого ФУндації пнг.webp" alt="ГО Фундація розвитку Закарпаття" loading="lazy" decoding="async">
+                        <img src="images/лого ФУндації пнг.webp" alt="ГО Фундація розвитку Закарпаття" loading="lazy"
+                            decoding="async">
                     </li>
                     <li class="banner-logo-item">
                         <img src="images/zgf_logo.webp" alt="ZGF" loading="lazy" decoding="async">
@@ -503,7 +531,8 @@
                             <div class="partner-card">
                                 <div class="partner-logo-box">
                                     <img src="images/Карпатськаий_заповідник.webp"
-                                        alt="Карпатський біосферний заповідник" class="partner-logo1" loading="lazy" decoding="async">
+                                        alt="Карпатський біосферний заповідник" class="partner-logo1" loading="lazy"
+                                        decoding="async">
                                 </div>
                                 <div class="partner-pill-links">
                                     <a href="https://cbr.nature.org.ua/" target="_blank" rel="noopener noreferrer"

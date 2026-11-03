@@ -23,25 +23,49 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 2. Mobile Drawer Navigation ---
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const mobileDrawer = document.getElementById('mobile-drawer');
-    const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
 
     if (hamburgerBtn && mobileDrawer) {
         const toggleDrawer = (forceClose = false) => {
-            const isOpen = forceClose ? false : !mobileDrawer.classList.contains('is-open');
-            mobileDrawer.classList.toggle('is-open', isOpen);
-            hamburgerBtn.classList.toggle('is-active', isOpen);
-            hamburgerBtn.setAttribute('aria-expanded', isOpen.toString());
-            mobileDrawer.setAttribute('aria-hidden', (!isOpen).toString());
+            const isCurrentlyOpen = mobileDrawer.classList.contains('is-open') || mobileDrawer.classList.contains('active');
+            const openState = forceClose ? false : !isCurrentlyOpen;
+
+            mobileDrawer.classList.toggle('is-open', openState);
+            mobileDrawer.classList.toggle('active', openState);
+            hamburgerBtn.classList.toggle('is-active', openState);
+            hamburgerBtn.classList.toggle('active', openState);
+            hamburgerBtn.setAttribute('aria-expanded', openState.toString());
+            mobileDrawer.setAttribute('aria-hidden', (!openState).toString());
+
+            // Prevent background scrolling while mobile drawer is open
+            document.body.style.overflow = openState ? 'hidden' : '';
         };
 
-        hamburgerBtn.addEventListener('click', () => toggleDrawer());
-
-        mobileNavItems.forEach(item => {
-            item.addEventListener('click', () => toggleDrawer(true));
+        // Open/Close toggle on hamburger button click
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDrawer();
         });
 
+        // Automatically close when clicking any anchor/nav link inside the drawer
+        const drawerLinks = mobileDrawer.querySelectorAll('a');
+        drawerLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                toggleDrawer(true);
+            });
+        });
+
+        // Close when clicking outside of the drawer
+        document.addEventListener('click', (e) => {
+            if (mobileDrawer.classList.contains('is-open') || mobileDrawer.classList.contains('active')) {
+                if (!mobileDrawer.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                    toggleDrawer(true);
+                }
+            }
+        });
+
+        // Close on Escape key press
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mobileDrawer.classList.contains('is-open')) {
+            if (e.key === 'Escape' && (mobileDrawer.classList.contains('is-open') || mobileDrawer.classList.contains('active'))) {
                 toggleDrawer(true);
             }
         });
@@ -179,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 isVideoInView = entry.isIntersecting;
                 if (entry.isIntersecting) {
                     if (!videoLightbox || !videoLightbox.classList.contains('active')) {
-                        cavePreviewVideo.play().catch(() => {});
+                        cavePreviewVideo.play().catch(() => { });
                     }
                 } else {
                     cavePreviewVideo.pause();
@@ -216,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Resume silent background loop if in view
         if (isVideoInView && cavePreviewVideo) {
-            cavePreviewVideo.play().catch(() => {});
+            cavePreviewVideo.play().catch(() => { });
         }
     };
 
@@ -290,9 +314,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         reserve: [
             {
-                src: 'images/заказник/місто та заказник.webp',
+                src: 'images/заказник/Chorna_Hora_(Wynohradiw).webp',
                 alt: 'Ботанічний заказник «Чорна гора» та панорама міста',
-                caption: 'Ботанічний заказник «Чорна гора» та панорама міста'
+                caption: 'Ботанічний заказник «Чорна гора»'
             },
             {
                 src: 'images/заказник/Відслонення виходу вулканічних порід - андезити, ліпарити, туфи.webp',
