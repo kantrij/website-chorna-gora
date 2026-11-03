@@ -130,13 +130,25 @@ ul {
 }
 
 .header-inner {
-  max-width: var(--max-width);
+  width: 100%;
+  max-width: 1400px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+  .header-inner {
+    max-width: 1400px;
+    padding: 0 54px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .site-logo {
@@ -314,7 +326,7 @@ ul {
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
-  padding: 24px;
+  padding: 20px 0 24px;
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
@@ -356,8 +368,8 @@ ul {
   box-shadow: none;
   border-radius: 0;
   display: block;
-  padding: 12px 0;
-  text-align: left;
+  padding: 12px 28px 12px 0;
+  text-align: right;
   text-decoration: none;
   transition: opacity 0.2s ease;
   -webkit-tap-highlight-color: transparent;
