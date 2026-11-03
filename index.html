@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Загадка Чорної Гори — Туристичний маршрут у Виноградові</title>
+    <title>Загадка Чорної гори — Туристичний маршрут у Виноградові</title>
     <link rel="shortcut icon" href="images/Маршрут.jpg" type="image/x-icon">
 
     <!-- Google Fonts: Montserrat for titles, Inter for body text -->
@@ -27,7 +27,7 @@
     <!-- Minimalist Sticky Header -->
     <header class="site-header" id="site-header">
         <div class="header-inner">
-            <a href="#hero" class="site-logo">Загадка Чорної Гори</a>
+            <a href="#hero" class="site-logo">Загадка Чорної гори</a>
 
             <nav class="desktop-nav" aria-label="Головна навігація">
                 <a href="#route" class="nav-item">Маршрут</a>
@@ -61,9 +61,8 @@
             <div class="hero-overlay"></div>
 
             <div class="hero-container">
-                <h1 class="hero-title">Загадка Чорної Гори</h1>
-                <p class="hero-subtitle">Туристичний пішохідний маршрут через руїни замку «Канків», ботанічний заказник
-                    та печеру «Морське око»</p>
+                <h1 class="hero-title">Загадка Чорної гори</h1>
+                <p class="hero-subtitle">Пішохідний туристичний маршрут, що поєднує руїни замку «Канків», ботанічний заказник «Чорна гора» та печеру «Морське око».</p>
                 <div class="hero-actions">
                     <a href="#route" class="btn btn-hero">Дослідити маршрут</a>
                 </div>
@@ -73,7 +72,23 @@
         <!-- Route Section -->
         <section class="content-section" id="route">
             <div class="container">
-                <h2 class="main-title">Туристичний маршрут "Загадка Чорної Гори"</h2>
+                <h2 class="main-title">Туристичний маршрут «Загадка Чорної гори»</h2>
+
+                <!-- Route Overview Video (Native HTML5 Background Loop & 4K YouTube Lightbox) -->
+                <div class="cave-video-container" id="cave-video-trigger" role="button" tabindex="0"
+                    aria-label="Дивитися повне відео маршруту (4K)">
+                    <video id="cave-preview-video" class="cave-inline-video" autoplay muted loop playsinline
+                        preload="auto" poster="images/печера/p1.jpg">
+                        <source src="images/печера/pecheravid.mp4" type="video/mp4">
+                        Ваш браузер не підтримує відтворення відео.
+                    </video>
+                    <!-- Sleek Top-Right Corner Play Button -->
+                    <div class="video-corner-play" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                        </svg>
+                    </div>
+                </div>
 
                 <div class="text-columns">
                     <div class="text-col">
@@ -100,7 +115,7 @@
 
                         <div class="route-graphic-card">
                             <img class="route-graphic-img zoomable" src="images/Маршрут.jpg"
-                                alt="Карта маршруту Загадка Чорної Гори" loading="lazy">
+                                alt="Карта маршруту «Загадка Чорної гори»" loading="lazy">
                         </div>
                         <div class="route-graphic-card">
                             <img class="route-graphic-img zoomable" src="images/Умовні_позначення.png"
@@ -153,7 +168,7 @@
                     <div id="route-map" class="route-map-frame" aria-label="Інтерактивна карта стежки"></div>
                     <div class="map-legend">
                         <span class="legend-badge"><span class="legend-dot castle"></span> Замок «Канків»</span>
-                        <span class="legend-badge"><span class="legend-dot reserve"></span> Заказник «Чорна Гора»</span>
+                        <span class="legend-badge"><span class="legend-dot reserve"></span> Заказник «Чорна гора»</span>
                         <span class="legend-badge"><span class="legend-dot cave"></span> Печера «Морське око»</span>
                         <span class="legend-badge"><span class="legend-line"></span> Пішохідний трек (~4.5 км)</span>
                     </div>
@@ -165,8 +180,16 @@
         <section class="content-section" id="castle">
             <div class="container">
                 <div class="section-heading-group">
-                    <h2 class="section-title">Севлюшський замок XIII — XV ст.</h2>
+                    <h2 class="section-title">Севлюшський замок «Канків» XIII — XV ст.</h2>
                     <p class="section-subtitle">Пам'ятка архітектури національного значення</p>
+                </div>
+
+                <!-- Castle Photos Block 1 (Overview & Reconstruction) -->
+                <div class="editorial-photo-grid grid-cols-2">
+                    <img src="images/замок/замок з висоти.jpg" alt="Севлюшський замок «Канків» з висоти пташиного польоту"
+                        class="editorial-grid-photo" data-gallery="castle" data-index="0" loading="lazy">
+                    <img src="images/замок/зпроектований уявний вигляд замку.jpg" alt="Архітектурна реконструкція укріплень"
+                        class="editorial-grid-photo" data-gallery="castle" data-index="1" loading="lazy">
                 </div>
 
                 <div class="text-columns">
@@ -174,16 +197,19 @@
                         <p>Севлюшський замок віднесено до об'єктів культурної спадщини національного значення, які
                             вносяться до Державного реєстру нерухомих пам'яток України.</p>
                         <p>Місцеві називають цей замок «Канків». Розташований замок на Чорній горі, на висоті 568 метрів
-                            над рівнем моря і є однією з найстаріших фортець України. За даними за-карпатських
+                            над рівнем моря і є однією з найстаріших фортець України. За даними закарпатських
                             археологів, котрі проводили дослідження замку в 2007 році, перше заселення пагорбу відбулося
                             в епоху пізньої бронзи культурою Станово XIV-XII ст. до н.е., а зведення кам'яних
                             фортифікацій датовано кінцем XIII початком XIV століття н.е.</p>
                         <p>Зі схилів Чорної гори можна було контролювати значну частину Притисянської рівнини, а
                             спорудження замку в такій місцевості, біля входу в Мараморошську долину, давало потенційну
-                            можливість господарям фортеці охо роняти сухопутний та річковий шляхи, котрими возили сіль у
-                            давнину. У вересні 1307 року король Карл | Роберт передав Севлюшський замок біхарському
+                            можливість господарям фортеці охороняти сухопутний та річковий шляхи, котрими возили сіль у
+                            давнину. У вересні 1307 року король Карл I Роберт передав Севлюшський замок біхарському
                             магнату Б.Боршо (Бенедеку), який із 1308 року розмістив тут постійний гарнізон і провів
-                            повну реконструкцію оборонних споруд Канкова протягом 1307-1308 pp.</p>
+                            повну реконструкцію оборонних споруд «Канкова» протягом 1307-1308 pp.</p>
+                    </div>
+
+                    <div class="text-col">
                         <p>Через кілька років, Беке Боршо разом зі своїм братом, виступив проти короля Карла Роберта
                             Анжуйського. У 1317 році під час штурму королівськими військами, замок було зруйновано.
                             Згодом, король наказав відновити укріплення і подарував його королеві Марії, а Севлюш
@@ -192,7 +218,19 @@
                         <p>Наприкінці XIV століття, у 1399 році, король Жигмонд Люксембурзький подарував Севлюш
                             магнатові Петеру Перені, який на місці старого замку зводить нові кам'яні стіни.</p>
                     </div>
+                </div>
 
+                <!-- Castle Photos Block 2 (Historical Archives & Sketches) -->
+                <div class="editorial-photo-grid grid-cols-3">
+                    <img src="images/замок/архівне фото замку.png" alt="Архівне фото замку «Канків»"
+                        class="editorial-grid-photo" data-gallery="castle" data-index="2" loading="lazy">
+                    <img src="images/замок/архівне фото замку2.png" alt="Історичний вигляд замкових мурів"
+                        class="editorial-grid-photo" data-gallery="castle" data-index="3" loading="lazy">
+                    <img src="images/замок/ескіз уявного вигляду замку.png" alt="Ескіз уявного первісного вигляду замку"
+                        class="editorial-grid-photo" data-gallery="castle" data-index="4" loading="lazy">
+                </div>
+
+                <div class="text-columns">
                     <div class="text-col">
                         <p>Після побудови нового родового палацу в місті, в кінці XV ст. Барон Перені передав фортецю
                             монахам-францисканцям, які перетворили її в укріплений монастир. Так, на території замку на
@@ -200,61 +238,35 @@
                             саме від назви елемента шати монахів (капюшон накидка «Канко») замок і отримав свою сучасну
                             назву «Канків».</p>
                         <p>З приходом францисканців, замок наповнився релігійним духом: ченці займалися молитвами,
-                            освітою та допомогою місцевому населенню. Навколо замку поступово сформува-лося поселення,
+                            освітою та допомогою місцевому населенню. Навколо замку поступово сформувалося поселення,
                             яке згодом стало містом Севлюш (сучасний Виноградів). Нова чернеча обитель була досить
                             впливовою, зокрема, сюди були перенесені мощі Яна Капістрана.</p>
                         <p>У 1556 році нащадок Петера Перені Ференц, який прийняв протестантство, вигнав зі своїх
-                            володінь все католицьке ду-ховенство та захопив францисканський монастир. Ченців, які чинили
-                            опір було вбито, а їх тіла разом із мощами свя-того Яна Капістрана скинуто в замковий
-                            колодязь, що зна-ходився між основною спорудою замку та церквою.</p>
+                            володінь все католицьке духовенство та захопив францисканський монастир. Ченців, які чинили
+                            опір було вбито, а їх тіла разом із мощами святого Яна Капістрана скинуто в замковий
+                            колодязь, що знаходився між основною спорудою замку та церквою.</p>
+                    </div>
+
+                    <div class="text-col">
                         <p>В результаті, проти бунтівного Перені був посланий загін імператорських військ, який штурмом
-                            узяв і зруйнував укрі-плення в 1557-1558 рр. Після цього замок більше не відродився. Будівлю
+                            узяв і зруйнував укріплення в 1557-1558 рр. Після цього замок більше не відродився. Будівлю
                             «підкошували» сніги і дощі, місцеві жителі розібрали його на камені, а навколо місця, де він
-                            розташо-ваний, посадили виноградники.</p>
+                            розташований, посадили виноградники.</p>
                         <p>У 1976 році на території замку знімали один із епізодів фільму «Табір йде в небо» режисера
                             Еміля Лотяну. На момент зйомок каплиця замку була перекрита покрівлею, а всередині, на
                             стінах, було видно значні фрагменти фрескового живопису, від яких у наші дні не залишилося і
                             сліду.</p>
-                        <p>Загадкові руїни Канкова на тлі мальовничої природи Вино-градівщини залучили сюди знімальні
+                        <p>Загадкові руїни «Канкова» на тлі мальовничої природи Виноградівщини залучили сюди знімальні
                             групи й інших фільмів, серед яких «Злива над полями», «Над Тисою».</p>
                     </div>
                 </div>
 
-                <!-- Castle Gallery -->
-                <div class="gallery-wrapper">
-                    <h3 class="gallery-title">Фотогалерея</h3>
-                    <div class="gallery-grid" data-gallery="castle">
-                        <figure class="gallery-item" data-index="0">
-                            <img src="images/замок/архівне фото замку.png" alt="Архівне фото замку" loading="lazy">
-                            <figcaption class="gallery-desc">Архівне фото замку</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="1">
-                            <img src="images/замок/архівне фото замку2.png" alt="Архівне фото замку" loading="lazy">
-                            <figcaption class="gallery-desc">Архівне фото замку</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="2">
-                            <img src="images/замок/Візуалізація.jpg" alt="Візуалізація замку" loading="lazy">
-                            <figcaption class="gallery-desc">Візуалізація замку</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="3">
-                            <img src="images/замок/ескіз уявного вигляду замку.png" alt="Ескіз уявного вигляду замку"
-                                loading="lazy">
-                            <figcaption class="gallery-desc">Ескіз уявного вигляду замку</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="4">
-                            <img src="images/замок/замок з висоти.jpg" alt="Замок з висоти" loading="lazy">
-                            <figcaption class="gallery-desc">Замок з висоти</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="5">
-                            <img src="images/замок/зпроектований уявний вигляд замку.jpg"
-                                alt="Зпроектований уявний вигляд замку" loading="lazy">
-                            <figcaption class="gallery-desc">Зпроектований уявний вигляд замку</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="6">
-                            <img src="images/замок/Капличка.png" alt="Капличка" loading="lazy">
-                            <figcaption class="gallery-desc">Капличка</figcaption>
-                        </figure>
-                    </div>
+                <!-- Castle Photos Block 3 (Visualization & Chapel) -->
+                <div class="editorial-photo-grid grid-cols-2">
+                    <img src="images/замок/Візуалізація.jpg" alt="Візуалізація реконструкції замку «Канків»"
+                        class="editorial-grid-photo" data-gallery="castle" data-index="5" loading="lazy">
+                    <img src="images/замок/Капличка.png" alt="Замкова капличка"
+                        class="editorial-grid-photo" data-gallery="castle" data-index="6" loading="lazy">
                 </div>
             </div>
         </section>
@@ -262,7 +274,16 @@
         <!-- Reserve Section -->
         <section class="content-section" id="reserve">
             <div class="container">
-                <h2 class="section-title">Ботанічний заказник "Чорна гора"</h2>
+                <h2 class="section-title">Ботанічний заказник «Чорна гора»</h2>
+
+                <!-- Reserve Photos Block 1 (Landscape & Volcanic Rocks) -->
+                <div class="editorial-photo-grid grid-cols-2">
+                    <img src="images/заказник/місто та заказник.jpg" alt="Ботанічний заказник «Чорна гора» та панорама міста"
+                        class="editorial-grid-photo" data-gallery="reserve" data-index="0" loading="lazy">
+                    <img src="images/заказник/Відслонення виходу вулканічних порід - андезити, ліпарити, туфи.jpeg"
+                        alt="Скельні виходи вулканічних порід (андезити, ліпарити, туфи)"
+                        class="editorial-grid-photo" data-gallery="reserve" data-index="1" loading="lazy">
+                </div>
 
                 <div class="text-columns">
                     <div class="text-col">
@@ -273,23 +294,41 @@
                             схили круто обриваються до долини річки Тиса, формуючи специфічні скелясті ландшафти. На
                             вулканічних породах сформувалися потужні бурі лісові ґрунти, які місцями перериваються
                             виходами скельних порід.</p>
+                    </div>
+
+                    <div class="text-col">
                         <p>Масив знаходиться у найтеплішій кліматичній зоні Закарпаття. Завдяки південній експозиції та
                             захищеності від північних вітрів, тут формується унікальний мезоклімат, що сприяє виживанню
                             теплолюбних реліктів.</p>
                         <p>Внаслідок багатовікової господарської діяльності рослинний покрив Чорної гори зазнав істотних
                             змін.</p>
+                    </div>
+                </div>
+
+                <!-- Reserve Photos Block 2 (Spring Flora) -->
+                <div class="editorial-photo-grid grid-cols-3">
+                    <img src="images/заказник/Шафран банатського.jpeg" alt="Шафран банатський (Crocus banaticus)"
+                        class="editorial-grid-photo" data-gallery="reserve" data-index="2" loading="lazy">
+                    <img src="images/заказник/Білоцвіт весняний.jpeg" alt="Білоцвіт весняний (Leucojum vernum)"
+                        class="editorial-grid-photo" data-gallery="reserve" data-index="3" loading="lazy">
+                    <img src="images/заказник/Булатка довголиста.jpeg" alt="Булатка довголиста (Cephalanthera longifolia)"
+                        class="editorial-grid-photo" data-gallery="reserve" data-index="4" loading="lazy">
+                </div>
+
+                <div class="text-columns">
+                    <div class="text-col">
                         <p>Найкраще природна рослинність збереглася біля верхньої частини гори на скелястих схилах.
                             Панівними є формації дубових та букових лісів. Букові ліси поширені в основному на
                             північному мегасхилі.</p>
-                    </div>
-
-                    <div class="text-col">
                         <p>Дубові ліси сформовані дубом скельним, частково дубами багатоплідним та Далешампа. На виходах
                             андезитових порід збереглися унікальні осередки дубових лісів за участю ясена білоцвітого.
                             Ці фітоценози є реліктовими й надзвичайно рідкісними для України. Поодиноко в цих ценозах
                             трапляються берека та клен татарський. У чагарниковому ярусі ростуть такі теплолюбні види,
                             як бирючина звичайна, бруслина європейська, дерен та виноград лісовий. Також виявлено
                             поодинокі кущі інжиру звичайного.</p>
+                    </div>
+
+                    <div class="text-col">
                         <p>Флора масиву нараховує близько 400 видів вищих судинних рослин. Із флористичного погляду
                             особливу цінність становлять локалітети остепнених і скельних фітоценозів на крутих
                             південних схилах. Тут зростають рідкісні для Українських Карпат види: жостір проносний,
@@ -297,50 +336,19 @@
                             солонечник звичайний, кольраушія пагононосна та інші. На затінених вологих скелях
                             трапляється аспленій чорний, а у підліску зростає рокитник австрійський. У трав'яному ярусі
                             поширені буквиця лікарська, оман верболистий, піретрум щитковий та інші.</p>
-                        <p>Для фауни "Чорної гори" характерна наявність специфічних теплолюбних видів, зокрема
+                        <p>Для фауни «Чорної гори» характерна наявність специфічних теплолюбних видів, зокрема
                             безхребетних.</p>
                     </div>
                 </div>
 
-                <!-- Reserve Gallery -->
-                <div class="gallery-wrapper">
-                    <h3 class="gallery-title">Фотогалерея</h3>
-                    <div class="gallery-grid" data-gallery="reserve">
-                        <figure class="gallery-item" data-index="0">
-                            <img src="images/заказник/Аспленій чорний.jpeg" alt="Аспленій чорний" loading="lazy">
-                            <figcaption class="gallery-desc">Аспленій чорний</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="1">
-                            <img src="images/заказник/Булатка довголиста.jpeg" alt="Булатка довголиста" loading="lazy">
-                            <figcaption class="gallery-desc">Булатка довголиста</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="2">
-                            <img src="images/заказник/Білоцвіт весняний.jpeg" alt="Білоцвіт весняний" loading="lazy">
-                            <figcaption class="gallery-desc">Білоцвіт весняний</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="3">
-                            <img src="images/заказник/Відслонення виходу вулканічних порід - андезити, ліпарити, туфи.jpeg"
-                                alt="Скельні виходи порід Чорної гори" loading="lazy">
-                            <figcaption class="gallery-desc">Скельні виходи порід Чорної гори</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="4">
-                            <img src="images/заказник/Гніздівка звичайна.jpeg" alt="Гніздівка звичайна" loading="lazy">
-                            <figcaption class="gallery-desc">Гніздівка звичайна</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="5">
-                            <img src="images/заказник/місто та заказник.jpg"
-                                alt="Панорама Виноградова з пагорбів Чорної гори" loading="lazy">
-                            <figcaption class="gallery-desc">Панорама Виноградова з пагорбів Чорної гори</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="6">
-                            <img src="images/заказник/Сугайник угорський.jpeg" alt="Сугайник угорський" loading="lazy">
-                            <figcaption class="gallery-desc">Сугайник угорський</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="7">
-                            <img src="images/заказник/Шафран банатського.jpeg" alt="Шафран банатський" loading="lazy">
-                            <figcaption class="gallery-desc">Шафран банатський</figcaption>
-                        </figure>
-                    </div>
+                <!-- Reserve Photos Block 3 (Rare Plants & Rock Ferns) -->
+                <div class="editorial-photo-grid grid-cols-3">
+                    <img src="images/заказник/Аспленій чорний.jpeg" alt="Аспленій чорний (Asplenium adiantum-nigrum)"
+                        class="editorial-grid-photo" data-gallery="reserve" data-index="5" loading="lazy">
+                    <img src="images/заказник/Гніздівка звичайна.jpeg" alt="Гніздівка звичайна (Neottia nidus-avis)"
+                        class="editorial-grid-photo" data-gallery="reserve" data-index="6" loading="lazy">
+                    <img src="images/заказник/Сугайник угорський.jpeg" alt="Сугайник угорський (Doronicum hungaricum)"
+                        class="editorial-grid-photo" data-gallery="reserve" data-index="7" loading="lazy">
                 </div>
             </div>
         </section>
@@ -348,7 +356,15 @@
         <!-- Cave Section -->
         <section class="content-section" id="cave">
             <div class="container">
-                <h2 class="section-title">Печера "Морське око"</h2>
+                <h2 class="section-title">Печера «Морське око»</h2>
+
+                <!-- Cave Photos Block 1 (Entrance & Lake) -->
+                <div class="editorial-photo-grid grid-cols-2">
+                    <img src="images/печера/p1.jpg" alt="Вхід до скельної печери «Морське око»"
+                        class="editorial-grid-photo" data-gallery="cave" data-index="0" loading="lazy">
+                    <img src="images/печера/p2.jpg" alt="Підземна водойма в печері «Морське око»"
+                        class="editorial-grid-photo" data-gallery="cave" data-index="1" loading="lazy">
+                </div>
 
                 <div class="text-columns">
                     <div class="text-col">
@@ -356,11 +372,19 @@
                             залишається стабільним попри непоодинокі спроби її відкачування. Простягається печера вглиб
                             приблизно на 30 м.</p>
                         <p>За даними історичних джерел, печера є рукотворною спорудою, вирубаною в скелі.</p>
+                    </div>
+
+                    <div class="text-col">
                         <p>Існують різні легенди та оповідання про печеру. Багато хто вірить, що печеру затопили
                             спеціально з ціллю приховати свої таємниці. Одні стверджують, що це зробили німці в період
                             Другої світової війни, щоб уберегти наукові дані, які зберігаються за залізними дверима.
                             Деякі місцеві жителі навіть стверджують, що особисто бачили ці двері та німецьку вишку
                             охорони біля входу.</p>
+                    </div>
+                </div>
+
+                <div class="text-columns">
+                    <div class="text-col">
                         <p>В іншій версії, йдеться про золото лицарів-храмовників тамплієрів, що закопане в печері.
                             Приводом для цієї теорії стали знайдені на стінах написи та мальтійські хрести, які належали
                             таємному ордену. Тамплієрам також приписують стрімкі заглиблення, що наявні усередині печери
@@ -371,6 +395,14 @@
                         <p>Є різні припущення, куди веде ця печера. Дехто вважає що вона поєднана з римо-католицьким
                             костьолом, що знаходиться в місті. Також вважається, що печера поєднана з замком «Канків» та
                             ще однією печерою, яка знаходиться неподалік від замку.</p>
+
+                        <!-- Cave Photos Block 2 (Fills the left column to balance the tall legend box) -->
+                        <div class="col-photo-pair">
+                            <img src="images/печера/p3.jpg" alt="Скельні склепіння підземелля"
+                                class="editorial-grid-photo" data-gallery="cave" data-index="2" loading="lazy">
+                            <img src="images/печера/p4.jpg" alt="Внутрішній кам’яний коридор печери"
+                                class="editorial-grid-photo" data-gallery="cave" data-index="3" loading="lazy">
+                        </div>
                     </div>
 
                     <div class="text-col">
@@ -400,59 +432,16 @@
                     </div>
                 </div>
 
-                <!-- Cave Section Video (Native HTML5 Background Loop & 4K YouTube Lightbox) -->
-                <div class="cave-video-container" id="cave-video-trigger" role="button" tabindex="0"
-                    aria-label="Дивитися повне відео маршруту (4K)">
-                    <video id="cave-preview-video" class="cave-inline-video" autoplay muted loop playsinline
-                        preload="auto" poster="images/печера/p1.jpg">
-                        <source src="images/печера/pecheravid.mp4" type="video/mp4">
-                        Ваш браузер не підтримує відтворення відео.
-                    </video>
-                    <!-- Sleek Top-Right Corner Play Button -->
-                    <div class="video-corner-play" aria-hidden="true">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Cave Gallery -->
-                <div class="gallery-wrapper">
-                    <h3 class="gallery-title">Фотогалерея печери</h3>
-                    <div class="gallery-grid" data-gallery="cave">
-                        <figure class="gallery-item" data-index="0">
-                            <img src="images/печера/IMG_6169 1.png" alt="Печера 1" loading="lazy">
-                            <figcaption class="gallery-desc">Печера 1</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="1">
-                            <img src="images/печера/IMG_6185 1.png" alt="Печера 2" loading="lazy">
-                            <figcaption class="gallery-desc">Печера 2</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="2">
-                            <img src="images/печера/IMG_7290 1.png" alt="Печера 3" loading="lazy">
-                            <figcaption class="gallery-desc">Печера 3</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="3">
-                            <img src="images/печера/IMG_7306 1.png" alt="Печера 4" loading="lazy">
-                            <figcaption class="gallery-desc">Печера 4</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="4">
-                            <img src="images/печера/p1.jpg" alt="Печера 5" loading="lazy">
-                            <figcaption class="gallery-desc">Печера 5</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="5">
-                            <img src="images/печера/p2.jpg" alt="Печера 6" loading="lazy">
-                            <figcaption class="gallery-desc">Печера 6</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="6">
-                            <img src="images/печера/p3.jpg" alt="Печера 7" loading="lazy">
-                            <figcaption class="gallery-desc">Печера 7</figcaption>
-                        </figure>
-                        <figure class="gallery-item" data-index="7">
-                            <img src="images/печера/p4.jpg" alt="Печера 8" loading="lazy">
-                            <figcaption class="gallery-desc">Печера 8</figcaption>
-                        </figure>
-                    </div>
+                <!-- Cave Photos Block 3 (Underground Exploration Grid) -->
+                <div class="editorial-photo-grid grid-cols-4">
+                    <img src="images/печера/IMG_6169 1.png" alt="Дослідження кам’яних галерей печери"
+                        class="editorial-grid-photo" data-gallery="cave" data-index="4" loading="lazy">
+                    <img src="images/печера/IMG_6185 1.png" alt="Скельний прохід у підземеллі"
+                        class="editorial-grid-photo" data-gallery="cave" data-index="5" loading="lazy">
+                    <img src="images/печера/IMG_7290 1.png" alt="Таємничі гроти печери"
+                        class="editorial-grid-photo" data-gallery="cave" data-index="6" loading="lazy">
+                    <img src="images/печера/IMG_7306 1.png" alt="Скельні породи підземного тунелю"
+                        class="editorial-grid-photo" data-gallery="cave" data-index="7" loading="lazy">
                 </div>
             </div>
         </section>
@@ -619,8 +608,10 @@
 
         <div class="lightbox-content">
             <img class="lightbox-img" id="lightbox-img" src="" alt="">
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-            <div class="lightbox-counter" id="lightbox-counter"></div>
+            <div class="lightbox-meta" id="lightbox-meta">
+                <span class="lightbox-caption" id="lightbox-caption"></span>
+                <span class="lightbox-counter" id="lightbox-counter"></span>
+            </div>
         </div>
 
         <button class="lightbox-arrow lightbox-next" id="lightbox-next" aria-label="Наступне фото">&#10095;</button>
@@ -632,7 +623,7 @@
         <button class="video-lightbox-close" id="video-lightbox-close" aria-label="Закрити відео">&times;</button>
         <div class="video-lightbox-stage">
             <iframe id="modal-youtube-iframe" class="modal-video-player" src=""
-                title="Відео маршруту: Печера Морське око"
+                title="Відео маршруту «Загадка Чорної гори»"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>

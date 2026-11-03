@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 link: '#castle'
             },
             {
-                name: 'Точка 2: Заказник «Чорна Гора»',
+                name: 'Точка 2: Заказник «Чорна гора»',
                 desc: 'Вулканічні схили та реліктові дубові ліси (508 м).',
                 coords: [48.146944, 23.058333],
                 symbol: '🌳',
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- 5. Unified Photo Lightbox System ---
+    // --- 5. Unified Photo Lightbox System (Grouped Section Galleries) ---
     const lightbox = document.getElementById('site-lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
@@ -249,12 +249,155 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxNext = document.getElementById('lightbox-next');
     const lightboxOverlay = document.getElementById('lightbox-overlay');
 
+    // Full photo collections for each section
+    const sectionGalleries = {
+        castle: [
+            {
+                src: 'images/замок/замок з висоти.jpg',
+                alt: 'Севлюшський замок «Канків» з висоти пташиного польоту',
+                caption: 'Севлюшський замок «Канків» з висоти пташиного польоту'
+            },
+            {
+                src: 'images/замок/зпроектований уявний вигляд замку.jpg',
+                alt: 'Архітектурна реконструкція укріплень замку',
+                caption: 'Архітектурна реконструкція укріплень замку'
+            },
+            {
+                src: 'images/замок/архівне фото замку.png',
+                alt: 'Архівне фото замку «Канків»',
+                caption: 'Архівне фото замку «Канків»'
+            },
+            {
+                src: 'images/замок/архівне фото замку2.png',
+                alt: 'Історичний вигляд замкових мурів',
+                caption: 'Історичний вигляд замкових мурів'
+            },
+            {
+                src: 'images/замок/ескіз уявного вигляду замку.png',
+                alt: 'Ескіз уявного первісного вигляду замку',
+                caption: 'Ескіз уявного первісного вигляду замку'
+            },
+            {
+                src: 'images/замок/Візуалізація.jpg',
+                alt: 'Візуалізація реконструкції замку «Канків»',
+                caption: 'Візуалізація реконструкції замку «Канків»'
+            },
+            {
+                src: 'images/замок/Капличка.png',
+                alt: 'Замкова капличка',
+                caption: 'Замкова капличка'
+            }
+        ],
+        reserve: [
+            {
+                src: 'images/заказник/місто та заказник.jpg',
+                alt: 'Ботанічний заказник «Чорна гора» та панорама міста',
+                caption: 'Ботанічний заказник «Чорна гора» та панорама міста'
+            },
+            {
+                src: 'images/заказник/Відслонення виходу вулканічних порід - андезити, ліпарити, туфи.jpeg',
+                alt: 'Скельні виходи вулканічних порід (андезити, ліпарити, туфи)',
+                caption: 'Скельні виходи вулканічних порід (андезити, ліпарити, туфи)'
+            },
+            {
+                src: 'images/заказник/Шафран банатського.jpeg',
+                alt: 'Шафран банатський (Crocus banaticus)',
+                caption: 'Шафран банатський'
+            },
+            {
+                src: 'images/заказник/Білоцвіт весняний.jpeg',
+                alt: 'Білоцвіт весняний (Leucojum vernum)',
+                caption: 'Білоцвіт весняний'
+            },
+            {
+                src: 'images/заказник/Булатка довголиста.jpeg',
+                alt: 'Булатка довголиста (Cephalanthera longifolia)',
+                caption: 'Булатка довголиста'
+            },
+            {
+                src: 'images/заказник/Аспленій чорний.jpeg',
+                alt: 'Аспленій чорний (Asplenium adiantum-nigrum)',
+                caption: 'Аспленій чорний'
+            },
+            {
+                src: 'images/заказник/Гніздівка звичайна.jpeg',
+                alt: 'Гніздівка звичайна (Neottia nidus-avis)',
+                caption: 'Гніздівка звичайна'
+            },
+            {
+                src: 'images/заказник/Сугайник угорський.jpeg',
+                alt: 'Сугайник угорський (Doronicum hungaricum)',
+                caption: 'Сугайник угорський'
+            }
+        ],
+        cave: [
+            {
+                src: 'images/печера/p1.jpg',
+                alt: 'Вхід до скельної печери «Морське око»',
+                caption: 'Вхід до скельної печери «Морське око»'
+            },
+            {
+                src: 'images/печера/p2.jpg',
+                alt: 'Підземна водойма в печері «Морське око»',
+                caption: 'Підземна водойма в печері «Морське око»'
+            },
+            {
+                src: 'images/печера/p3.jpg',
+                alt: 'Скельні склепіння підземелля',
+                caption: 'Скельні склепіння підземелля'
+            },
+            {
+                src: 'images/печера/p4.jpg',
+                alt: 'Внутрішній кам’яний коридор печери',
+                caption: 'Внутрішній кам’яний коридор печери'
+            },
+            {
+                src: 'images/печера/IMG_6169 1.png',
+                alt: 'Дослідження кам’яних галерей печери',
+                caption: 'Дослідження кам’яних галерей печери'
+            },
+            {
+                src: 'images/печера/IMG_6185 1.png',
+                alt: 'Скельний прохід у підземеллі',
+                caption: 'Скельний прохід у підземеллі'
+            },
+            {
+                src: 'images/печера/IMG_7290 1.png',
+                alt: 'Таємничі гроти печери',
+                caption: 'Таємничі гроти печери'
+            },
+            {
+                src: 'images/печера/IMG_7306 1.png',
+                alt: 'Скельні породи підземного тунелю',
+                caption: 'Скельні породи підземного тунелю'
+            }
+        ],
+        route: [
+            {
+                src: 'images/Маршрут.jpg',
+                alt: 'Карта маршруту «Загадка Чорної гори»',
+                caption: 'Карта маршруту «Загадка Чорної гори»'
+            },
+            {
+                src: 'images/Умовні_позначення.png',
+                alt: 'Умовні позначення маршруту',
+                caption: 'Умовні позначення'
+            },
+            {
+                src: 'images/Профіль_висот.png',
+                alt: 'Профіль висот маршруту',
+                caption: 'Профіль висот'
+            }
+        ]
+    };
+
     let currentItems = [];
     let currentIndex = 0;
 
     const openLightbox = (items, index) => {
+        if (!items || items.length === 0) return;
         currentItems = items;
-        currentIndex = index;
+        currentIndex = (index >= 0 && index < items.length) ? index : 0;
         renderLightboxItem();
         lightbox.classList.add('active');
         lightbox.setAttribute('aria-hidden', 'false');
@@ -272,14 +415,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const item = currentItems[currentIndex];
         lightboxImg.src = item.src;
         lightboxImg.alt = item.alt || '';
-        lightboxCaption.textContent = item.caption || item.alt || '';
-        lightboxCounter.textContent = `${currentIndex + 1} / ${currentItems.length}`;
+        if (lightboxCaption) {
+            lightboxCaption.textContent = item.caption || item.alt || '';
+        }
+        if (lightboxCounter) {
+            lightboxCounter.textContent = `${currentIndex + 1} / ${currentItems.length}`;
+        }
 
-        // Preload next image
+        // Preload adjacent images
         if (currentItems.length > 1) {
             const nextIdx = (currentIndex + 1) % currentItems.length;
-            const preload = new Image();
-            preload.src = currentItems[nextIdx].src;
+            const prevIdx = (currentIndex - 1 + currentItems.length) % currentItems.length;
+            const preloadNext = new Image();
+            preloadNext.src = currentItems[nextIdx].src;
+            const preloadPrev = new Image();
+            preloadPrev.src = currentItems[prevIdx].src;
         }
     };
 
@@ -295,37 +445,55 @@ document.addEventListener('DOMContentLoaded', () => {
         renderLightboxItem();
     };
 
-    // Attach click handlers to photo galleries
-    const galleryGrids = document.querySelectorAll('.gallery-grid');
-    galleryGrids.forEach(grid => {
-        const items = Array.from(grid.querySelectorAll('.gallery-item')).map(el => {
-            const img = el.querySelector('img');
-            const desc = el.querySelector('.gallery-desc');
-            return {
-                src: img ? img.getAttribute('src') : '',
-                alt: img ? img.getAttribute('alt') : '',
-                caption: desc ? desc.textContent.trim() : (img ? img.alt : '')
-            };
-        });
-
-        grid.querySelectorAll('.gallery-item').forEach((itemEl, idx) => {
-            itemEl.addEventListener('click', () => {
-                openLightbox(items, idx);
+    // Attach click handlers to all editorial grid photos
+    const gridPhotos = document.querySelectorAll('.editorial-grid-photo, .editorial-image-frame');
+    gridPhotos.forEach(photo => {
+        const galleryKey = photo.getAttribute('data-gallery');
+        const initialIdx = parseInt(photo.getAttribute('data-index') || '0', 10);
+        const galleryItems = sectionGalleries[galleryKey];
+        if (galleryItems) {
+            photo.setAttribute('role', 'button');
+            photo.setAttribute('tabindex', '0');
+            photo.addEventListener('click', () => {
+                openLightbox(galleryItems, initialIdx);
             });
+            photo.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openLightbox(galleryItems, initialIdx);
+                }
+            });
+        }
+    });
+
+    // Attach click handlers to route graphic cards (Map, Markings, Elevation)
+    const routeGraphicCards = document.querySelectorAll('.route-graphic-card');
+    routeGraphicCards.forEach((card, idx) => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+            openLightbox(sectionGalleries.route, idx);
+        });
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openLightbox(sectionGalleries.route, idx);
+            }
         });
     });
 
-    // Attach click handlers to zoomable route graphics (Map, Markings, Elevation)
+    // Fallback click handler for any remaining .zoomable elements outside frames
     const zoomableImgs = document.querySelectorAll('.zoomable');
-    const zoomableList = Array.from(zoomableImgs).map(img => ({
-        src: img.getAttribute('src'),
-        alt: img.getAttribute('alt'),
-        caption: img.getAttribute('alt')
-    }));
-
     zoomableImgs.forEach((imgEl, idx) => {
-        imgEl.addEventListener('click', () => {
-            openLightbox(zoomableList, idx);
+        imgEl.addEventListener('click', (e) => {
+            if (imgEl.closest('.editorial-image-frame') || imgEl.closest('.route-graphic-card')) {
+                return;
+            }
+            const fallbackList = Array.from(zoomableImgs).map(img => ({
+                src: img.getAttribute('src'),
+                alt: img.getAttribute('alt'),
+                caption: img.getAttribute('alt')
+            }));
+            openLightbox(fallbackList, idx);
         });
     });
 
